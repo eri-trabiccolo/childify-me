@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Childify Me\n"
-"POT-Creation-Date: 2014-12-29 12:32+0100\n"
-"PO-Revision-Date: 2014-12-29 18:53+0100\n"
+"POT-Creation-Date: 2014-12-29 12:31+0100\n"
+"PO-Revision-Date: 2014-12-29 18:54+0100\n"
 "Last-Translator: Rocco Aliberti\n"
 "Language-Team: Rock\n"
 "Language: it_IT\n"
@@ -17,32 +17,32 @@ msgstr ""
 
 #: ../childify-me.php:106
 msgid "Error while trying to access to the filesystem!"
-msgstr "Si è verificato un errore nell'accesso al filesystem!"
+msgstr ""
 
 #: ../childify-me.php:241
 msgid "Click on the button below to create a child theme"
-msgstr "Clicca sul pulsante sottostante per creare un tema figlio"
+msgstr ""
 
 #: ../childify-me.php:257
 msgid "Child theme name here"
-msgstr "Inserisci il nome del tema figlio"
+msgstr ""
 
 #: ../childify-me.php:258
 msgid "Create"
-msgstr "Crea"
+msgstr ""
 
 #: ../childify-me.php:259
 msgid "Cancel"
-msgstr "Annulla"
+msgstr ""
 
 #: ../childify-me.php:262
 msgid "Child theme"
-msgstr "Tema figlio"
+msgstr ""
 
 #: ../childify-me.php:263
 msgid "successfully created!"
-msgstr "creato con successo!"
+msgstr ""
 
 #: ../childify-me.php:268
 msgid "Preview and Activate"
-msgstr "Preview e Attiva"
+msgstr ""
