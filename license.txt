@@ -1,4 +1,4 @@
-Customizr WordPress theme, copyright (C) 2013 Nicolas GUILLAUME
+Childify-Me WordPress plugin, copyright (C) 2014 Rocco Aliberti
         Licensed under the GNU GPL License below
 
 
