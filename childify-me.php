@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Childify Me
  * Plugin URI: https://github.com/eri-trabiccolo/childify-me
- * Description: Create a child theme
+ * Description: Create a child theme from the Theme Customizer
  * Version: 0.9.0
  * Author: Rocco Aliberti
  * Author URI: https://github.com/eri-trabiccolo
@@ -160,19 +160,22 @@ EOF;
 
         $child_functionsphp = trailingslashit( $child_theme_directory ) . 'functions.php';
         $wp_filesystem->put_contents( $child_functionsphp, $child_functionsphp_content );
+
+        /* create the child-theme screenshot.png*/    
         if ( file_exists( $parent_theme_directory . "/screenshot.png" ) ) {
             $screenshot = $this->childify_screenshot(
                 $parent_theme_directory.'/screenshot.png');
             $wp_filesystem->put_contents($child_theme_directory.'/screenshot.png', 
                 $screenshot);
         }
+
         wp_send_json_success( array(
             'stylesheet' => sanitize_file_name( strtolower( $child ) )
         ));
         return;
-    }
+    }//end of create_child_theme()
     
-    // create screenshot image(string): overlay of parent screenshot + childify-me badge
+    //create screenshot image(string): overlay of parent screenshot + childify-me badge
     function childify_screenshot($screenshot){
         $dest = imagecreatefrompng($screenshot);
         $src = imagecreatefrompng( plugin_dir_path(__FILE__) . '/back/assets/img/child.png');
@@ -187,8 +190,7 @@ EOF;
         return $image;
     }
    
-
-    // declares the plugin translation domain
+    //declares the plugin translation domain
     function cm_plugin_lang() {
         load_plugin_textdomain( $this -> plug_lang , false, CM_DIR_NAME . '/lang' );
     }
@@ -231,7 +233,8 @@ EOF;
             )
         ); 
     }
-
+    
+    //this template will be loaded with underscore in cm-customizr(.min).js
     function print_template(){
     ?>
         <script type="text/template" id="childify-tpl"> 
@@ -272,10 +275,9 @@ EOF;
        </script>
     <?php
     }
-
 }//end of class
 
-//Creates a new instance of front and admin
+//Creates a new instance
 new Childify_Me;
 
 endif;
