@@ -2,7 +2,7 @@
 /*
  * TODO: 
  * - better errors handling?
- * - better validation, suppress *?\.. chars
+ * - better validation, suppress *?\.. chars ?
 **/
 jQuery(function ($) {
     var $main_panel = $('#customize-info').parent(),
@@ -18,6 +18,7 @@ jQuery(function ($) {
     $main_panel.append( childify_template() );
     
     $('#cm-add-new').click(function(){
+        $(this).toggleClass('open');
         $('#cm-form-container').slideToggle("fast");
     });
     // reset on cancel button click
