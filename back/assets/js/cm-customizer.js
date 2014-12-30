@@ -2,6 +2,7 @@
 /*
  * TODO: 
  * - better errors handling?
+ * - better validation, suppress *?\.. chars
 **/
 jQuery(function ($) {
     var $main_panel = $('#customize-info').parent(),
@@ -32,6 +33,8 @@ jQuery(function ($) {
     
     // start child-theme creation on create button click
     $('#cm-create').click(function(){
+        if ( $(this).attr('disabled') )
+            return;
         if ( ! validate($('#cm-cname')) )
             return;
         $(this).attr('disabled', 'disabled');
