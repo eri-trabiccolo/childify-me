@@ -20,6 +20,8 @@ jQuery(function ($) {
     $('#cm-add-new').click(function(){
         $(this).toggleClass('open');
         $('#cm-form-container').slideToggle("fast");
+        if ( ! $('#cm-cname').attr('readonly') )
+            $('#cm-cname').focus();
     });
     // reset on cancel button click
     $('#cm-cancel').click(function(){
@@ -46,13 +48,18 @@ jQuery(function ($) {
     // set action buttons state depending on validation
     // of the input child name field (on keypressed and blur)
     $('#cm-cname').on('keyup blur', function(evt){
-        if ( evt.keyCode && 
-            ( evt.keyCode > 34 && evt.keyCode < 41) || 
-                evt.keyCode == 16
-           )
-            return;
+        if ( evt.keyCode ) {
+            console.log(evt.keyCode)
+            if ( ( evt.keyCode > 34 && evt.keyCode < 41 ) || 
+                evt.keyCode == 16 )
+                return;
+            if ( evt.keyCode == 13 ){
+                $('#cm-create').trigger('click');
+                return;
+            }
+        }
         set_action_buttons( validate( $(this) ) )
-    })
+    });
     
     function set_action_buttons(state){
         if ( state ){
