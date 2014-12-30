@@ -36,7 +36,7 @@ jQuery(function ($) {
     $('#cm-create').click(function(){
         if ( $(this).attr('disabled') )
             return;
-        if ( ! validate($('#cm-cname')) )
+        if ( ! validate($('#cm-cname'), true) )
             return;
         $(this).attr('disabled', 'disabled');
         $('#cm-cname').attr('readonly', 'readonly');
@@ -45,7 +45,12 @@ jQuery(function ($) {
     
     // set action buttons state depending on validation
     // of the input child name field (on keypressed and blur)
-    $('#cm-cname').on('keyup blur', function(){
+    $('#cm-cname').on('keyup blur', function(evt){
+        if ( evt.keyCode && 
+            ( evt.keyCode > 34 && evt.keyCode < 41) || 
+                evt.keyCode == 16
+           )
+            return;
         set_action_buttons( validate( $(this) ) )
     })
     
@@ -59,8 +64,11 @@ jQuery(function ($) {
         }
     }
     
-    function validate($elem){
-        $elem.val( $elem.val().replace(/\s{1,}/g, "" ) );
+    function validate( $elem, submit){
+        if ( submit )
+            $elem.val( $.trim( $elem.val() ) );
+        else 
+            $elem.val( $elem.val().replace(/^\s+/g,'') )
         if ( $elem.val() == '' )
             return false;
         return true;
@@ -69,15 +77,15 @@ jQuery(function ($) {
     function handle_response(response){
         // is json?
         if ( typeof response.success != 'undefined'){
-            clean_all();
             if ( response.success ) { /* Success!! */
-                $('#cm-ctheme').append(response.data.stylesheet);
+                $('#cm-ctheme').append($('#cm-cname').val());
                 $('#cm-preview').attr('href',
                     $('#cm-preview').attr('href')+response.data.stylesheet
                 );
             }else{
                 prepare_display_error(response.data.message);
             }
+            clean_all();
             $('#cm-success').css('display', 'block');
         }else{
             if ( response.indexOf("<form") > -1 ){ /*ftp*/
