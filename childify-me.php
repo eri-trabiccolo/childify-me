@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Childify Me
  * Plugin URI: https://github.com/eri-trabiccolo/childify-me
- * Description: Create a child theme form the Theme Customizer
+ * Description: Create a child theme from the Theme Customizer panel
  * Version: 0.9.0
  * Author: Rocco Aliberti
  * Author URI: https://github.com/eri-trabiccolo
