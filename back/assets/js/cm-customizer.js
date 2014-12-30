@@ -17,15 +17,17 @@ jQuery(function ($) {
     
     $main_panel.append( childify_template() );
     
-    $('#cm-add-new').click(function(){
+    $('#cm-add-new').on('keypress click', function(evt){
+        if ( ! is_click_pretender($(this), evt) )
+            return;
         $(this).toggleClass('open');
         $('#cm-form-container').slideToggle("fast");
         if ( ! $('#cm-cname').attr('readonly') )
             $('#cm-cname').focus();
     });
     // reset on cancel button click
-    $('#cm-cancel').click(function(){
-        if ( $(this).attr('disabled') )
+    $('#cm-cancel').on('keypress click', function(){
+        if ( ! is_click_pretender( $(this), evt) )
             return;
         $('#cm-cname').removeAttr('readonly');
         $('#cm-create').removeAttr('disabled');
@@ -35,8 +37,8 @@ jQuery(function ($) {
     });
     
     // start child-theme creation on create button click
-    $('#cm-create').click(function(){
-        if ( $(this).attr('disabled') )
+    $('#cm-create').on('keypress click', function(evt){
+        if ( ! is_click_pretender($(this), evt) )
             return;
         if ( ! validate($('#cm-cname'), true) )
             return;
@@ -61,7 +63,13 @@ jQuery(function ($) {
         }
         set_action_buttons( validate( $(this) ) )
     });
-    
+    // helper function check if the element is enabled
+    // and event is "click"
+    // or "enter" keypressed.
+    function is_click_pretender($elem, evt){
+        return ( ! $elem.attr('disabled') &&
+            ( evt.type === 'click' || evt.which === 13 ) );
+    }
     function set_action_buttons(state){
         if ( state ){
             $('#cm-create').removeAttr('disabled');
@@ -100,11 +108,15 @@ jQuery(function ($) {
                 detach_ftp_form();
                 $('#cm-form-container').append('<div id="ftp-form">'+response+'</div>');
                 scroll_to('#ftp-form');
-                $('#childify-container input#upgrade').click(function(evt){
-                    evt.preventDefault();
-                    $(this).attr('disabled', 'disabled');
-                    post();        
-                });
+                $('input[name="hostname"]').focus();
+                $('#childify-container input#upgrade').on('keydown click',
+                        function(evt){
+                            evt.preventDefault();
+                            if ( ! is_click_pretender( $(this), evt ) )
+                                return;
+                            $(this).attr('disabled', 'disabled');
+                            post();        
+                        });
             }else{/* general error */
                 // handle 0 and -1 replies? don't think so
                 clean_all();

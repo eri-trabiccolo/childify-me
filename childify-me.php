@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Childify Me
  * Plugin URI: https://github.com/eri-trabiccolo/childify-me
- * Description: Create a child theme from the Theme Customizer
+ * Description: Create a child theme form the Theme Customizer
  * Version: 0.9.0
  * Author: Rocco Aliberti
  * Author URI: https://github.com/eri-trabiccolo
@@ -243,7 +243,7 @@ EOF;
                 printf('<span id="cm-info" class="cm-notice">%1$s</span>',
                     __('Click on the button below to create a child theme', $this::$instance->plug_lang )
                 );
-                printf('<span id="cm-add-new" class="cm-add-new button button-primary">%1$s
+                printf('<span id="cm-add-new" class="cm-add-new button button-primary" tabindex="0">%1$s
                     </span>',
                     "Childify Me"
                 );
@@ -251,10 +251,10 @@ EOF;
                     <div id="cm-form-container" style="display:none">
                         <form id="cm-form">
 
-                            <input placeholder="%1$s" type="text" id="cm-cname" name="cm-cname" value="">
+                            <input placeholder="%1$s" type="text" id="cm-cname" name="cm-cname" value="" tabindex="0">
                         </form>
                         <div id="cm-actions">
-                            <span id="cm-create" class="button button-secondary">%2$s</span><span class="button button-secondary" id="cm-cancel">%3$s</span>
+                            <span id="cm-create" class="button button-secondary" tabindex="0">%2$s</span><span class="button button-secondary" id="cm-cancel" tabindex="0">%3$s</span>
                         </div>
                     </div>',
                     __( "Child theme name here" , $this::$instance -> plug_lang ),
