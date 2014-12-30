@@ -19,27 +19,49 @@ jQuery(function ($) {
     $('#cm-add-new').click(function(){
         $('#cm-form-container').slideToggle("fast");
     });
-    
+    // reset on cancel button click
     $('#cm-cancel').click(function(){
+        if ( $(this).attr('disabled') )
+            return;
         $('#cm-cname').removeAttr('readonly');
         $('#cm-create').removeAttr('disabled');
         $('#cm-cname').val("");
         detach_ftp_form();
+        set_action_buttons( validate($('#cm-cname')) );
     });
     
+    // start child-theme creation on create button click
     $('#cm-create').click(function(){
-        if ( ! validate() )
+        if ( ! validate($('#cm-cname')) )
             return;
         $(this).attr('disabled', 'disabled');
         $('#cm-cname').attr('readonly', 'readonly');
         post();
     });
-    function validate(){
-        if ( $('#cm-cname').val() == '' )
-            /*TODO append validation error message*/
+    
+    // set action buttons state depending on validation
+    // of the input child name field (on keypressed and blur)
+    $('#cm-cname').on('keyup blur', function(){
+        set_action_buttons( validate( $(this) ) )
+    })
+    
+    function set_action_buttons(state){
+        if ( state ){
+            $('#cm-create').removeAttr('disabled');
+            $('#cm-cancel').removeAttr('disabled');
+        }else{
+            $('#cm-create').attr('disabled', 'disabled');
+            $('#cm-cancel').attr('disabled', 'disabled');
+        }
+    }
+    
+    function validate($elem){
+        $elem.val( $elem.val().replace(/\s{1,}/g, "" ) );
+        if ( $elem.val() == '' )
             return false;
         return true;
     }
+
     function handle_response(response){
         // is json?
         if ( typeof response.success != 'undefined'){
@@ -71,28 +93,33 @@ jQuery(function ($) {
             }
         }
     }
+    
     function prepare_display_error($message){
         $('#cm-success > p').text( $message ? $message : "Error");
         $('#cm-success').removeClass('updated');
         $('#cm-success').addClass('error');
         $('#cm-success #cm-preview').detach();
     }
+    
     function post(){
         data += "&"+$('#childify-container form').serialize();
         $.post(ajaxurl, data, function(response){ 
             handle_response(response); 
         });
     }
+    
     function clean_all(){
        $('#cm-form-container').detach();
        $('#cm-add-new').detach();
        $('#cm-info').detach();
     }
+    
     function detach_ftp_form(){
         if ( $('#ftp-form').length > 0 ){
             $('#ftp-form').detach();
         }
     }
+    
     function scroll_to($anchor){
         var $offset = parseInt( $($anchor).offset().top ) - 
             parseInt( $('.wp-full-overlay-sidebar-content').offset().top ) +
@@ -101,7 +128,9 @@ jQuery(function ($) {
             scrollTop: $offset
         }, 700);
     }
+    
     $(document).ready(function($){
+        set_action_buttons( false );
         $('#childify-container').css('display', 'block');
     });
 });
