@@ -48,8 +48,9 @@ jQuery(function ($) {
     // set action buttons state depending on validation
     // of the input child name field (on keypressed and blur)
     $('#cm-cname').on('keyup blur', function(evt){
+        if ( $(this).attr('readonly') )
+            return;
         if ( evt.keyCode ) {
-            console.log(evt.keyCode)
             if ( ( evt.keyCode > 34 && evt.keyCode < 41 ) || 
                 evt.keyCode == 16 )
                 return;
