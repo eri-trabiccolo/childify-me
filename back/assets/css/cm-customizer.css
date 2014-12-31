@@ -17,7 +17,7 @@
     content: '\f345';
 }
 #cm-add-new.open:after {
-    content: '\f346';
+    content: '\f343';
 }
 #cm-add-new.button-primary{
     padding-left: 22px;
