@@ -22,7 +22,6 @@ if ( ! class_exists( 'Childify_Me' ) ) :
 class Childify_Me {
     //Access any method or var of the class with classname::$instance -> var or method():
     static $instance;
-    public $version;
     public $plug_name;
     public $plug_version;
     public $plug_lang;
@@ -113,13 +112,12 @@ class Childify_Me {
         $current_theme          = wp_get_theme( $parent_stylesheet );
         $parent_stylesheet      = $current_theme -> get_stylesheet();
         $parent_name            = $current_theme -> Name;
-        $i                      = 2;
         $child                  = $childname;
         $child_theme_directory  = trailingslashit( get_theme_root() ) . 
             sanitize_file_name( strtolower( $child ) ) ;
-        $parent_theme_directory = trailingslashit( get_theme_root() ) . 
-            sanitize_file_name( $current_theme -> Template ) ;
+        $parent_theme_directory = $current_theme -> get_stylesheet_directory();
 
+        $i                      = 2;
         /* incremental dirname */
         $suffix                 = '';
         while ( $wp_filesystem -> is_dir( $child_theme_directory . $suffix ) )
@@ -140,7 +138,7 @@ class Childify_Me {
                 'customizr-pro') ) ? '*/
 @import url("../'.$parent_stylesheet.'/style.css");' : '*/';
         
-        $wp_filesystem->mkdir( $child_theme_directory );
+        $wp_filesystem -> mkdir( $child_theme_directory );
         $child_stylesheet       = trailingslashit( $child_theme_directory ) . 'style.css';
         $child_stylesheet_content = <<<EOF
 /*
@@ -152,21 +150,21 @@ Author: $author
 $load_parent_stylesheet
 /* Your awesome customization starts here */
 EOF;
-        $wp_filesystem->put_contents( $child_stylesheet, $child_stylesheet_content );
+        $wp_filesystem -> put_contents( $child_stylesheet, $child_stylesheet_content );
         $child_functionsphp_content = <<<EOF
 <?php
 /* Write your awesome functions below */
 EOF;
 
         $child_functionsphp = trailingslashit( $child_theme_directory ) . 'functions.php';
-        $wp_filesystem->put_contents( $child_functionsphp, $child_functionsphp_content );
+        $wp_filesystem -> put_contents( $child_functionsphp, $child_functionsphp_content );
 
         /* create the child-theme screenshot.png*/    
         if ( file_exists( $parent_theme_directory . "/screenshot.png" ) ) {
-            $screenshot = $this->childify_screenshot(
+            $screenshot = $this -> childify_screenshot(
                 $parent_theme_directory.'/screenshot.png');
-            $wp_filesystem->put_contents($child_theme_directory.'/screenshot.png', 
-                $screenshot);
+            $wp_filesystem -> put_contents( $child_theme_directory.'/screenshot.png', 
+                $screenshot );
         }
 
         wp_send_json_success( array(
@@ -176,17 +174,17 @@ EOF;
     }//end of create_child_theme()
     
     //create screenshot image(string): overlay of parent screenshot + childify-me badge
-    function childify_screenshot($screenshot){
+    function childify_screenshot( $screenshot ){
         $dest = imagecreatefrompng($screenshot);
-        $src = imagecreatefrompng( plugin_dir_path(__FILE__) . '/back/assets/img/child.png');
-        imagecopy($dest, $src, 20, 20, 0, 0, 130, 130);
+        $src = imagecreatefrompng( plugin_dir_path(__FILE__) . '/back/assets/img/child.png' );
+        imagecopy( $dest, $src, 20, 20, 0, 0, 130, 130 );
         ob_start();
-        header('Content-Type: image/png');
-        imagepng($dest);
+            header( 'Content-Type: image/png' );
+            imagepng( $dest );
         $image = ob_get_contents();
         ob_end_clean();
-        imagedestroy($src);
-        imagedestroy($dest);
+        imagedestroy( $src );
+        imagedestroy( $dest );
         return $image;
     }
    
@@ -197,8 +195,8 @@ EOF;
 
     function cm_customize_js_css() {
         global $wp_customize;
-        $current_stylesheet = $wp_customize->theme()->stylesheet ;
-        if ( wp_get_theme($current_stylesheet) -> parent() )
+        $current_stylesheet = $wp_customize -> theme() -> stylesheet ;
+        if ( wp_get_theme( $current_stylesheet ) -> parent() )
             return;
 
         wp_enqueue_style(
@@ -257,18 +255,18 @@ EOF;
                             <span id="cm-create" class="button button-secondary" tabindex="0">%2$s</span><span class="button button-secondary" id="cm-cancel" tabindex="0">%3$s</span>
                         </div>
                     </div>',
-                    __( "Child theme name here" , $this::$instance -> plug_lang ),
-                    __( "Create" , $this::$instance -> plug_lang ),
-                    __( "Cancel" , $this::$instance -> plug_lang )
+                    __( "Child theme name here" , $this -> plug_lang ),
+                    __( "Create" , $this -> plug_lang ),
+                    __( "Cancel" , $this -> plug_lang )
                 );
                 printf('<div id="cm-success" class="updated"><p>%1$s <span id="cm-ctheme"></span> %2$s</p><a id="cm-preview" class="button button-primary" href="%3$s" title="%4$s">%4$s</a></div>',
-                    __("Child theme", $this::$instance -> plug_lang ),
-                    __("successfully created!", $this::$instance -> plug_lang ),
+                    __("Child theme", $this -> plug_lang ),
+                    __("successfully created!", $this -> plug_lang ),
                     sprintf('%1$s?theme=',
                         is_multisite() ? network_admin_url( 'customize.php' ) :
                         admin_url( 'customize.php' )
                     ),
-                    __("Preview and Activate", $this::$instance -> plug_lang )
+                    __("Preview and Activate", $this -> plug_lang )
                 );
               ?>
           </div>
