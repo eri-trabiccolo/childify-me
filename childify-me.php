@@ -259,7 +259,7 @@ EOF;
                     __( "Create" , $this -> plug_lang ),
                     __( "Cancel" , $this -> plug_lang )
                 );
-                printf('<div id="cm-success" class="updated"><p>%1$s <span id="cm-ctheme"></span> %2$s</p><a id="cm-preview" class="button button-primary" href="%3$s" title="%4$s">%4$s</a></div>',
+                printf('<div id="cm-success" class="updated"><p>%1$s <span id="cm-ctheme"></span> %2$s</p><a id="cm-preview" class="button button-primary" href="%3$s" title="%4$s" tabindex="0">%4$s</a></div>',
                     __("Child theme", $this -> plug_lang ),
                     __("successfully created!", $this -> plug_lang ),
                     sprintf('%1$s?theme=',

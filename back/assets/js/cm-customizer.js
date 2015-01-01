@@ -22,8 +22,10 @@ jQuery(function ($) {
             return;
         $(this).toggleClass('open');
         $('#cm-form-container').slideToggle("fast");
-        if ( ! $('#cm-cname').attr('readonly') )
+        if ( ! $('#cm-cname').attr('readonly') ){
             $('#cm-cname').focus();
+            scroll_to( $('#cm-cname') );
+        }
     });
     // reset on cancel button click
     $('#cm-cancel').on('keypress click', function(){
@@ -160,7 +162,7 @@ jQuery(function ($) {
             scrollTop: $offset
         }, 700);
     }
-    
+
     $(document).ready(function($){
         set_action_buttons( false );
         $('#childify-container').css('display', 'block');
