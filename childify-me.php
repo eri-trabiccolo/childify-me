@@ -111,7 +111,8 @@ class Childify_Me {
 
         $current_theme          = wp_get_theme( $parent_stylesheet );
         $parent_stylesheet      = $current_theme -> get_stylesheet();
-        $parent_name            = $current_theme -> Name;
+        $parent_name            = $current_theme -> Name ? $current_theme -> Name :
+                                                           $parent_stylesheet;
         $child                  = $childname;
         $child_theme_directory  = trailingslashit( get_theme_root() ) . 
             sanitize_file_name( strtolower( $child ) ) ;
