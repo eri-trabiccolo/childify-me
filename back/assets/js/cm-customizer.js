@@ -85,9 +85,7 @@ jQuery(function ($) {
     function validate( $elem, submit){
         if ( submit )
             $elem.val( $.trim( $elem.val() ) );
-        else 
-            $elem.val( $elem.val().replace(/^\s+/g,'') )
-        if ( $elem.val() == '' )
+        if ( $elem.val().replace(/^\s+/,'') == '' )
             return false;
         return true;
     }
