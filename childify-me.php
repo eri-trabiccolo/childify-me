@@ -160,11 +160,15 @@ EOF;
         $wp_filesystem -> put_contents( $child_functionsphp, $child_functionsphp_content );
 
         /* create the child-theme screenshot.png*/    
-        if ( file_exists( $parent_theme_directory . "/screenshot.png" ) ) {
-            $screenshot = $this -> childify_screenshot(
-                $parent_theme_directory.'/screenshot.png');
-            $wp_filesystem -> put_contents( $child_theme_directory.'/screenshot.png', 
-                $screenshot );
+        if ( file_exists( $parent_theme_directory . '/screenshot.png' ) ) {
+            if ( extension_loaded( 'gd' ) && function_exists( 'gd_info' ) ){
+                $screenshot = $this -> childify_screenshot(
+                    $parent_theme_directory . '/screenshot.png');
+                $wp_filesystem -> put_contents( $child_theme_directory . '/screenshot.png', 
+                    $screenshot );
+            }else
+                $wp_filesystem -> copy( $parent_theme_directory . "/screenshot.png",
+                    $child_theme_directory . '/screenshot.png' );
         }
 
         wp_send_json_success( array(
