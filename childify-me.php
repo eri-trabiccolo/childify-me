@@ -228,8 +228,7 @@ EOF;
            'cm-customizer',
            'CMAdmin',
             array(
-                'AjaxUrl'    => is_multisite() ? network_admin_url( 'admin-ajax.php' ):
-                                                 admin_url( 'admin-ajax.php' ),
+                'AjaxUrl'    => network_admin_url( 'admin-ajax.php' ),
                 'CMnonce' 	 => wp_create_nonce( 'cm-nonce' ),
                 'Action'     => CM_CACTION,
                 'Parent'     => $current_stylesheet
@@ -268,8 +267,7 @@ EOF;
                     __("Child theme", $this -> plug_lang ),
                     __("successfully created!", $this -> plug_lang ),
                     sprintf('%1$s?theme=',
-                        is_multisite() ? network_admin_url( 'customize.php' ) :
-                        admin_url( 'customize.php' )
+                        network_admin_url( 'customize.php' )
                     ),
                     __("Preview and Activate", $this -> plug_lang )
                 );
