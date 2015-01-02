@@ -228,8 +228,8 @@ EOF;
            'cm-customizer',
            'CMAdmin',
             array(
-                'AjaxUrl'    => network_admin_url( 'admin-ajax.php' ),
-                'CMnonce' 	 => wp_create_nonce( 'cm-nonce' ),
+                'AjaxUrl'    => admin_url( 'admin-ajax.php' ),
+                'CMnonce'    => wp_create_nonce( 'cm-nonce' ),
                 'Action'     => CM_CACTION,
                 'Parent'     => $current_stylesheet
             )
@@ -263,13 +263,20 @@ EOF;
                     __( "Create" , $this -> plug_lang ),
                     __( "Cancel" , $this -> plug_lang )
                 );
-                printf('<div id="cm-success" class="updated"><p>%1$s <span id="cm-ctheme"></span> %2$s</p><a id="cm-preview" class="button button-primary" href="%3$s" title="%4$s" tabindex="0">%4$s</a></div>',
+                printf('<div id="cm-success" class="updated"><p>%1$s <span id="cm-ctheme"></span> %2$s</p>%3$s</div>',
                     __("Child theme", $this -> plug_lang ),
                     __("successfully created!", $this -> plug_lang ),
-                    sprintf('%1$s?theme=',
-                        network_admin_url( 'customize.php' )
-                    ),
-                    __("Preview and Activate", $this -> plug_lang )
+                    ( ! is_multisite() ) ? 
+                        sprintf('<a id="%3$s" class="button button-primary" href="%1$s" title="%2$s" tabindex="0">%2$s</a>',
+                            sprintf('%1$s?theme=', admin_url( 'customize.php' ) ),
+                            __("Preview and Activate", $this -> plug_lang ),
+                            "cm-preview"
+                        ) :
+                        sprintf('<a id="%3$s" class="button button-primary" href="%1$s" title="%2$s" tabindex="0">%2$s</a>',
+                            network_admin_url('themes.php'),
+                            __("Go to Network Themes", $this -> plug_lang ),
+                            "cm-themes"
+                        )
                 );
               ?>
           </div>
