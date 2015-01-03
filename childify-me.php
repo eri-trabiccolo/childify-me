@@ -182,7 +182,7 @@ EOF;
     function childify_screenshot( $screenshot ){
         $dest = imagecreatefrompng($screenshot);
         $src = imagecreatefrompng( plugin_dir_path(__FILE__) . '/back/assets/img/child.png' );
-        imagecopy( $dest, $src, 20, 20, 0, 0, 130, 130 );
+        imagecopy( $dest, $src, 0, 0, 0, 0, 350, 350 );
         ob_start();
             header( 'Content-Type: image/png' );
             imagepng( $dest );
