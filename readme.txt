@@ -2,7 +2,7 @@
 Contributors: d4z_c0nf
 Author URI: https://github.com/eri-trabiccolo/
 Plugin URI: https://github.com/eri-trabiccolo/childify-me
-Donate link: 
+Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=J8TFWAWQ8U3DN
 Tags: child, theme, themes
 Requires at least: 3.4
 Tested up to: 4.1
