@@ -28,14 +28,14 @@
     background-color: #fff;
     border-bottom: 1px solid #eee;
     display: none;
-    padding: 20px 0;
+    padding-top: 20px;
     position: relative;
     left: 0;
     -webkit-transition: left ease-in-out .18s;
     transition: left ease-in-out .18s;
 }
 #childify-container form {
-    padding: 15px;
+    padding: 15px 15px 15px 0px;
 }
 #childify-container td {
     width: 70%;
