@@ -14,7 +14,7 @@ Create a child-theme from the Theme Customizer.
 
 == Description ==
 
-** Create child themes from any non-child theme directly from the Theme Customizer panel.**
+**Create child themes from any non-child theme directly from the Theme Customizer panel.**
 
 Works also when previewing a theme before activation!
 
@@ -32,16 +32,16 @@ The plugin is [translation ready](http://codex.wordpress.org/Translating_WordPre
 
 = Credits =
 
-* Thanks to @nikeo(http://themesandco.com) for spurring me, testing my plugin and for his valuable advices
-* Thanks to @rdellconsulting(http://www.rdellconsulting.com) for testing my plugin even on multisite and for his valuable advices
+* Thanks to [@nikeo](http://themesandco.com) for spurring me, testing my plugin and for his valuable advices
+* Thanks to [@rdellconsulting](http://www.rdellconsulting.com) for testing my plugin even on multisite and for his valuable advices
 * Image child.png generated on http://oojits.com/info/img/corner-ribbons/
 
 == Installation ==
 
-1. Install the plugin right from your WordPress admin in plugins > Add New
+1. Install the plugin right from your WordPress admin in plugins > Add New. 
 1-bis. Download the plugin, unzip the package and upload it to your /wp-content/plugins/ directory
 2. Activate the plugin
-3. Go to Appearance -> Customize and you'll see the "Childify Me" button
+3. Go to Appearance -> Customize and you'll see the "Childify Me" button. 
 3-bis. In Appearance -> Themes, hover on a non-child theme and click on Live Preview, once there you'll see the "Childify Me" button
 
 == Frequently Asked Questions ==
