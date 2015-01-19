@@ -243,7 +243,7 @@ EOF;
             <div id="childify-container">
               <?php
                 printf('<span id="cm-info" class="cm-notice">%1$s</span>',
-                    __('Click on the button below to create a child theme', $this::$instance->plug_lang )
+                    __('Click on the button below to create a child theme', $this -> plug_lang )
                 );
                 printf('<span id="cm-add-new" class="cm-add-new button button-primary" tabindex="0">%1$s
                     </span>',
