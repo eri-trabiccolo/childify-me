@@ -6,7 +6,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: child, theme, themes
 Requires at least: 3.4
 Tested up to: 4.1
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -68,6 +68,9 @@ non-active theme, hover on a non-child theme and click on Live Preview)
 4. Childify Me in multisite environment creating a child-theme of Twenty Twelve's from Live Preview
 
 == Changelog ==
+= 1.0.1 : January 19, 2018 =
+* Fix: improve compatibility with PHP versions < 3.5.3
+* Fix: css, change some padding
 
 = 1.0.0 : January 03, 2015 =
 * First offical release!
