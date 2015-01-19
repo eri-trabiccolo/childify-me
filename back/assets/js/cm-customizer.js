@@ -28,7 +28,7 @@ jQuery(function ($) {
         }
     });
     // reset on cancel button click
-    $('#cm-cancel').on('keypress click', function(){
+    $('#cm-cancel').on('keypress click', function(evt){
         if ( ! is_click_pretender( $(this), evt) )
             return;
         $('#cm-cname').removeAttr('readonly');

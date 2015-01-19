@@ -35,7 +35,7 @@
     transition: left ease-in-out .18s;
 }
 #childify-container form {
-    padding: 15px 15px 0px 15px;
+    padding: 15px 15px 15px 15px;
 }
 #childify-container td {
     width: 70%;
@@ -72,5 +72,5 @@
     margin-left: 5px;
 }
 #childify-container #ftp-form {
-    margin-bottom: -30px;
+    margin-bottom: -25px;
 }
