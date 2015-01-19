@@ -28,14 +28,14 @@
     background-color: #fff;
     border-bottom: 1px solid #eee;
     display: none;
-    padding-top: 20px;
+    padding: 20px 0px;
     position: relative;
     left: 0;
     -webkit-transition: left ease-in-out .18s;
     transition: left ease-in-out .18s;
 }
 #childify-container form {
-    padding: 15px 15px 15px 0px;
+    padding: 15px 15px 0px 15px;
 }
 #childify-container td {
     width: 70%;
@@ -70,4 +70,7 @@
 #cm-actions .button {
     margin-right: 5px;
     margin-left: 5px;
+}
+#childify-container #ftp-form {
+    margin-bottom: -30px;
 }
