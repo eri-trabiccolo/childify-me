@@ -6,7 +6,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: child, theme, themes
 Requires at least: 3.4
 Tested up to: 4.1
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -59,6 +59,16 @@ Please, refresh the page.
 Go to Appearance -> Customize (or to Appearance -> Themes, if you want to create a child-theme of a
 non-active theme, hover on a non-child theme and click on Live Preview)
 
+= I created a child-theme but I lost my menu, how so? =
+
+This is because some options aren't really part of the theme options.
+Basically you can consider them as options related to theme. Wordpress saves them in a different db row of the wp-options table.
+From the Codex: http://codex.wordpress.org/Child_Themes
+
+= Why my child-theme's screenshot doesn't have the ribbon? =
+
+That feature is implemented using some functions of the PHP GD module.
+So you need a PHP version >= 4.0 and the GD module installed and loaded.
 
 == Screenshots ==
 
@@ -68,10 +78,14 @@ non-active theme, hover on a non-child theme and click on Live Preview)
 4. Childify Me in multisite environment creating a child-theme of Twenty Twelve's from Live Preview
 
 == Changelog ==
-= 1.0.2 : January 19, 2018 =
+
+= 1.0.3 : February 02, 2015 =
+* Fix: handle parent 8 bit colormap screenshot.png
+
+= 1.0.2 : January 19, 2015 =
 * Fix: cancel button bug, css form padding 
 
-= 1.0.1 : January 19, 2018 =
+= 1.0.1 : January 19, 2015 =
 * Fix: improve compatibility with PHP versions < 3.5.3
 * Fix: css, change some padding
 

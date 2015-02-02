@@ -3,7 +3,7 @@
  * Plugin Name: Childify Me
  * Plugin URI: https://github.com/eri-trabiccolo/childify-me
  * Description: Create a child theme from the Theme Customizer panel
- * Version: 1.0.2
+ * Version: 1.0.3
  * Author: Rocco Aliberti
  * Author URI: https://github.com/eri-trabiccolo
  * License: GPL2+
@@ -29,7 +29,7 @@ class Childify_Me {
     function __construct () {
         self::$instance =& $this;
         $this -> plug_name     = 'Childify Me';
-        $this -> plug_version  = '1.0.2';
+        $this -> plug_version  = '1.0.3';
         $this -> plug_lang     = 'childify-me';
 
         //USEFUL CONSTANTS
@@ -180,16 +180,31 @@ EOF;
     
     //create screenshot image(string): overlay of parent screenshot + childify-me badge
     function childify_screenshot( $screenshot ){
-        $dest = imagecreatefrompng($screenshot);
-        $src = imagecreatefrompng( plugin_dir_path(__FILE__) . '/back/assets/img/child.png' );
-        imagecopy( $dest, $src, 0, 0, 0, 0, 350, 350 );
+        $parent_src = imagecreatefrompng($screenshot);
+        $cm_src = imagecreatefrompng( plugin_dir_path(__FILE__) .
+                                        '/back/assets/img/child.png' );
+        
+        if ( function_exists('imagecreatetruecolor') ){
+            $dest = imagecreatetruecolor(880, 660);
+            imagecopy( $dest, $parent_src, 0, 0, 0, 0, 880, 660 );
+        }else
+            $dest = $parent_src;
+
+        imagecopy( $dest, $cm_src, 0, 0, 0, 0, 350, 350 );
+        
         ob_start();
             header( 'Content-Type: image/png' );
             imagepng( $dest );
         $image = ob_get_contents();
         ob_end_clean();
+        
         imagedestroy( $src );
         imagedestroy( $dest );
+        
+        if ( $dest !== $parent_src ){
+            imagedestroy( $parent_src );
+        }
+
         return $image;
     }
    
