@@ -65,6 +65,9 @@ This is because some options aren't really part of the theme options.
 Basically you can consider them as options related to theme. Wordpress saves them in a different db row of the wp-options table.
 From the Codex: http://codex.wordpress.org/Child_Themes
 
+**Note:** You may need to re-save your menu (Appearance > Menus, or Appearance > Customize > Menus) and theme options 
+(including background and header images) after activating the child theme. 
+
 = Why my child-theme's screenshot doesn't have the ribbon? =
 
 That feature is implemented using some functions of the PHP GD module.
