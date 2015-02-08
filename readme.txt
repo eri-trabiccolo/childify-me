@@ -6,7 +6,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: child, theme, themes
 Requires at least: 3.4
 Tested up to: 4.1
-Stable tag: 1.0.4
+Stable tag: 1.0.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -24,7 +24,7 @@ Multisite compatible.
 
 Ftp credential requests handled in the Customizer.
 **Child-theme's screenshot generated** from the parent screenshot, with a ribbon dynamically added.
-Child-theme's author dynamically generated from the user Name and Last Name, if set, otherwise falls back on the username.
+Child-theme's author dynamically generated from the user Name and Last Name, if set, otherwise falls back on a generic "Administrator".
 
 = Translations =
 
@@ -81,6 +81,10 @@ So you need a PHP version >= 4.0 and the GD module installed and loaded.
 4. Childify Me in multisite environment creating a child-theme of Twenty Twelve's from Live Preview
 
 == Changelog ==
+
+= 1.0.5 : =
+* Fix: for security reasons, fallback on generic "Administrator" if no user Name and Last name are set
+* Fix: translations updated
 
 = 1.0.4 : February 02, 2015 =
 * Fix: fix typo while creating child-theme screenshot.png
