@@ -82,7 +82,7 @@ So you need a PHP version >= 4.0 and the GD module installed and loaded.
 
 == Changelog ==
 
-= 1.0.5 : =
+= 1.0.5 : February 08, 2015 =
 * Fix: for security reasons, fallback on generic "Administrator" if no user Name and Last name are set
 * Fix: translations updated
 
