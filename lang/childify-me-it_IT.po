@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Childify Me\n"
-"POT-Creation-Date: 2015-01-02 13:10+0100\n"
-"PO-Revision-Date: 2015-01-02 13:10+0100\n"
+"POT-Creation-Date: 2015-02-08 15:38+0100\n"
+"PO-Revision-Date: 2015-02-08 15:39+0100\n"
 "Last-Translator: Rocco Aliberti\n"
 "Language-Team: Rock\n"
 "Language: it_IT\n"
@@ -19,34 +19,38 @@ msgstr ""
 msgid "Error while trying to access to the filesystem!"
 msgstr "Si è verificato un errore nell'accesso al filesystem!"
 
-#: ../childify-me.php:246
+#: ../childify-me.php:134
+msgid "Administrator"
+msgstr "Amministratore"
+
+#: ../childify-me.php:261
 msgid "Click on the button below to create a child theme"
 msgstr "Clicca sul pulsante sottostante per creare un tema figlio"
 
-#: ../childify-me.php:262
+#: ../childify-me.php:277
 msgid "Child theme name here"
 msgstr "Inserisci il nome del tema figlio"
 
-#: ../childify-me.php:263
+#: ../childify-me.php:278
 msgid "Create"
 msgstr "Crea"
 
-#: ../childify-me.php:264
+#: ../childify-me.php:279
 msgid "Cancel"
 msgstr "Annulla"
 
-#: ../childify-me.php:267
+#: ../childify-me.php:282
 msgid "Child theme"
 msgstr "Tema figlio"
 
-#: ../childify-me.php:268
+#: ../childify-me.php:283
 msgid "successfully created!"
 msgstr "creato con successo!"
 
-#: ../childify-me.php:272
+#: ../childify-me.php:287
 msgid "Preview and Activate"
 msgstr "Preview e Attiva"
 
-#: ../childify-me.php:277
+#: ../childify-me.php:292
 msgid "Go to Network Themes"
-msgstr ""
+msgstr "Temi di Rete"
