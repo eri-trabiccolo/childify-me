@@ -57,7 +57,7 @@
     font-size: 13px;
     line-height: 18px;
     font-style: italic;
-    display: inline-block;
+    display: block;
 }
 #cm-success {
     display: none;
