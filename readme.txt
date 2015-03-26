@@ -6,7 +6,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: child, theme, themes
 Requires at least: 3.4
 Tested up to: 4.1.1
-Stable tag: 1.0.6
+Stable tag: 1.0.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -81,6 +81,9 @@ So you need a PHP version >= 4.0 and the GD module installed and loaded.
 4. Childify Me in multisite environment creating a child-theme of Twenty Twelve's from Live Preview
 
 == Changelog ==
+
+= 1.0.7 : March 26, 2015 =
+* Fix: fix css according to some Customizr theme css in the customize
 
 = 1.0.6 : March 22, 2015 =
 * Add: added Russian and Ukrainian translations. Many thanks to <a href="https://wordpress.org/support/profile/baneff">@banef</a>

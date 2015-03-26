@@ -29,7 +29,7 @@ class Childify_Me {
     function __construct () {
         self::$instance =& $this;
         $this -> plug_name     = 'Childify Me';
-        $this -> plug_version  = '1.0.6';
+        $this -> plug_version  = '1.0.7';
         $this -> plug_lang     = 'childify-me';
 
         //USEFUL CONSTANTS
