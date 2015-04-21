@@ -48,6 +48,10 @@
     width: auto;
     min-height: 10px;
 }
+#childify-container input[type=checkbox], 
+#childify-container input[type=radio] {
+    float: none;
+}
 .in-sub-panel #childify-container {
     left: -450px;
 }
