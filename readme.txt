@@ -94,7 +94,10 @@ So you need a PHP version >= 4.0 and the GD module installed and loaded.
 4. Childify Me in multisite environment creating a child-theme of Twenty Twelve's from Live Preview
 
 == Changelog ==
-= 1.0.9 : April 21, 2015 =
+= 1.0.10 : May 07, 2015 =
+* Fix: readme typo
+
+= 1.0.9 : May 06, 2015 =
 * Add: added Portuguese and Dutch translations: Many thanks to <a href="http://h4bs.com/">@wph4</a> 
 
 = 1.0.8 : April 21, 2015 =
