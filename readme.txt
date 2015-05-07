@@ -5,8 +5,8 @@ Plugin URI: https://github.com/eri-trabiccolo/childify-me
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=J8TFWAWQ8U3DN
 Tags: child, theme, themes
 Requires at least: 3.4
-Tested up to: 4.2
-Stable tag: 1.0.8
+Tested up to: 4.2.2
+Stable tag: 1.0.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -26,15 +26,28 @@ Ftp credential requests handled in the Customizer.
 **Child-theme's screenshot generated** from the parent screenshot, with a ribbon dynamically added.
 Child-theme's author dynamically generated from the user Name and Last Name, if set, otherwise falls back on a generic "Administrator".
 
-= Translations =
-
-The plugin is [translation ready](http://codex.wordpress.org/Translating_WordPress), the default .mo and .po files are inluded in /lang.
 
 = Credits =
 
 * Thanks to [@nikeo](http://themesandco.com) for spurring me, testing my plugin and for his valuable advices
 * Thanks to [@rdellconsulting](http://www.rdellconsulting.com) for testing my plugin even on multisite and for his valuable advices
 * Image child.png generated on http://oojits.com/info/img/corner-ribbons/
+
+
+= Translations =
+
+The plugin is [translation ready](http://codex.wordpress.org/Translating_WordPress), the default .mo and .po files are inluded in /lang.
+
+Childify-Me is currently available in the following languages:
+
+* Italian    ( by ME, which doesn't stay for Millennium Edition :P ) 
+* Russian    ( by [@banef](https://wordpress.org/support/profile/baneff) )
+* Ukrainian  ( by [@banef](https://wordpress.org/support/profile/baneff) )
+* Portuguese ( by [@wph4](http://h4bs.com/) )
+* Dutch      ( by [@wph4](http://h4bs.com/) )
+
+Many thanks to these generous users :)
+
 
 == Installation ==
 
@@ -81,6 +94,9 @@ So you need a PHP version >= 4.0 and the GD module installed and loaded.
 4. Childify Me in multisite environment creating a child-theme of Twenty Twelve's from Live Preview
 
 == Changelog ==
+= 1.0.9 : April 21, 2015 =
+* Add: added Portuguese and Dutch translations: Many thanks to <a href="http://h4bs.com/">@wph4</a> 
+
 = 1.0.8 : April 21, 2015 =
 * Fix: minor css fix to radio buttons
 
@@ -88,7 +104,7 @@ So you need a PHP version >= 4.0 and the GD module installed and loaded.
 * Fix: fix css according to some Customizr theme css in the customize
 
 = 1.0.6 : March 22, 2015 =
-* Add: added Russian and Ukrainian translations. Many thanks to <a href="https://wordpress.org/support/profile/baneff">@banef</a>
+* Add: added Russian and Ukrainian translations. Many thanks to <a href="https://wordpress.org/support/profile/baneff">@baneff</a>
 
 = 1.0.5 : February 08, 2015 =
 * Fix: for security reasons, fallback on generic "Administrator" if no user Name and Last name are set

@@ -3,7 +3,7 @@
  * Plugin Name: Childify Me
  * Plugin URI: https://github.com/eri-trabiccolo/childify-me
  * Description: Create a child theme from the Theme Customizer panel
- * Version: 1.0.8
+ * Version: 1.0.9
  * Author: Rocco Aliberti
  * Author URI: https://github.com/eri-trabiccolo
  * License: GPL2+
@@ -29,7 +29,7 @@ class Childify_Me {
     function __construct () {
         self::$instance =& $this;
         $this -> plug_name     = 'Childify Me';
-        $this -> plug_version  = '1.0.8';
+        $this -> plug_version  = '1.0.9';
         $this -> plug_lang     = 'childify-me';
 
         //USEFUL CONSTANTS
@@ -102,7 +102,7 @@ class Childify_Me {
         if ( ! ( $wp_filesystem instanceof WP_Filesystem_Base ) ) {
 			if ( ! WP_Filesystem() ) {
                 wp_send_json_error( array(
-                    'message' =>__( 'Error while trying to access to the filesystem!', 
+                    'message' =>__( 'Error while trying to access the filesystem!', 
                     $this -> plug_lang )
                 ));
                 return;
