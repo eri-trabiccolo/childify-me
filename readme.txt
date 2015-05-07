@@ -41,8 +41,8 @@ The plugin is [translation ready](http://codex.wordpress.org/Translating_WordPre
 Childify-Me is currently available in the following languages:
 
 * Italian    ( by ME, which doesn't stay for Millennium Edition :P ) 
-* Russian    ( by [@banef](https://wordpress.org/support/profile/baneff) )
-* Ukrainian  ( by [@banef](https://wordpress.org/support/profile/baneff) )
+* Russian    ( by [@baneff](https://wordpress.org/support/profile/baneff) )
+* Ukrainian  ( by [@baneff](https://wordpress.org/support/profile/baneff) )
 * Portuguese ( by [@wph4](http://h4bs.com/) )
 * Dutch      ( by [@wph4](http://h4bs.com/) )
 
