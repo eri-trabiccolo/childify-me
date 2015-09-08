@@ -5,8 +5,8 @@ Plugin URI: https://github.com/eri-trabiccolo/childify-me
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=J8TFWAWQ8U3DN
 Tags: child, theme, themes
 Requires at least: 3.4
-Tested up to: 4.2.2
-Stable tag: 1.0.10
+Tested up to: 4.3
+Stable tag: 1.0.11
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,6 +45,7 @@ Childify-Me is currently available in the following languages:
 * Ukrainian  ( by [@baneff](https://wordpress.org/support/profile/baneff) )
 * Portuguese ( by [@wph4](http://h4bs.com/) )
 * Dutch      ( by [@wph4](http://h4bs.com/) )
+* Hebrew     ( by [@JTS-IL](www.glezer.co.il) )
 
 Many thanks to these generous users :)
 
@@ -94,6 +95,10 @@ So you need a PHP version >= 4.0 and the GD module installed and loaded.
 4. Childify Me in multisite environment creating a child-theme of Twenty Twelve's from Live Preview
 
 == Changelog ==
+
+= 1.0.11 : Sep 08, 2015 =
+* Add: Hebrew translation: Many thanks to <a href="www.glezer.co.il">Yaacov Glezer</a>
+
 = 1.0.10 : May 07, 2015 =
 * Fix: readme typo
 
