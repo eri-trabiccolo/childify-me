@@ -55,6 +55,9 @@
 .in-sub-panel #childify-container {
     left: -450px;
 }
+.rtl .in-sub-panel #childify-container {
+    right: -450px;
+}
 .cm-notice {
     height: 40px;
     padding: 0 15px 10px 15px;
