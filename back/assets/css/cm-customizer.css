@@ -33,6 +33,7 @@
     left: 0;
     -webkit-transition: left ease-in-out .18s;
     transition: left ease-in-out .18s;
+    margin-top: 20px;
 }
 #childify-container form {
     padding: 15px 15px 15px 15px;
@@ -59,8 +60,7 @@
     left: auto; right: -450px; height: 0;
 }
 .cm-notice {
-    height: 40px;
-    padding: 0 15px 10px 15px;
+    padding: 10px 15px 10px 15px;
     font-size: 13px;
     line-height: 18px;
     font-style: italic;
