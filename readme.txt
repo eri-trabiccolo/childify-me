@@ -5,8 +5,8 @@ Plugin URI: https://github.com/eri-trabiccolo/childify-me
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=J8TFWAWQ8U3DN
 Tags: child theme, child-themes, childtheme, childthemes, custom theme, custom themeing, parent theme, child theme creator, child theme generator, child, theme, themes
 Requires at least: 3.4
-Tested up to: 4.5
-Stable tag: 1.0.13
+Tested up to: 4.5.1
+Stable tag: 1.0.14
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -95,6 +95,11 @@ So you need a PHP version >= 4.0 and the GD module installed and loaded.
 4. Childify Me in multisite environment creating a child-theme of Twenty Twelve's from Live Preview
 
 == Changelog ==
+= 1.0.14 : ;May 06, 2016 =
+* Add: Improved child-theme creation for Hueman theme
+* Imp: small css fixes
+* Imp: restrict plugin scope to is_admin() == true
+* Upd: update Tested up to wordpress version version 4.5.1
 
 = 1.0.13 : Nov 26, 2015 =
 * Add: Fix rtl CSS: Many thanks to <a href="http://www.glezer.co.il">Yaacov Glezer</a>
