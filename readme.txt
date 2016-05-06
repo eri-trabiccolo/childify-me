@@ -95,7 +95,7 @@ So you need a PHP version >= 4.0 and the GD module installed and loaded.
 4. Childify Me in multisite environment creating a child-theme of Twenty Twelve's from Live Preview
 
 == Changelog ==
-= 1.0.14 : ;May 06, 2016 =
+= 1.0.14 : May 06, 2016 =
 * Add: Improved child-theme creation for Hueman theme
 * Imp: small css fixes
 * Imp: restrict plugin scope to is_admin() == true
