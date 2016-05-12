@@ -3,9 +3,11 @@
  * Plugin Name: Childify Me
  * Plugin URI: https://github.com/eri-trabiccolo/childify-me
  * Description: Create a child theme from the Theme Customizer panel
- * Version: 1.0.14
+ * Version: 1.0.15
  * Author: Rocco Aliberti
  * Author URI: https://github.com/eri-trabiccolo
+ * Text Domain: childify-me
+ * Domain Path: /lang
  * License: GPL2+
  */
 
@@ -24,7 +26,6 @@ class Childify_Me {
     static $instance;
     public $plug_name;
     public $plug_version;
-    public $plug_lang;
 
     //themes which do not need the style.css importing
     public $special_themes = array(
@@ -39,8 +40,7 @@ class Childify_Me {
 
         self::$instance =& $this;
         $this -> plug_name     = 'Childify Me';
-        $this -> plug_version  = '1.0.13';
-        $this -> plug_lang     = 'childify-me';
+        $this -> plug_version  = '1.0.15';
 
         //USEFUL CONSTANTS
         if ( ! defined( 'CM_DIR_NAME' ) ) {
@@ -113,7 +113,7 @@ class Childify_Me {
 			if ( ! WP_Filesystem() ) {
                 wp_send_json_error( array(
                     'message' =>__( 'Error while trying to access the filesystem!',
-                    $this -> plug_lang )
+                    'childify-me' )
                 ));
                 return;
 			}
@@ -142,7 +142,7 @@ class Childify_Me {
         $author                 = strlen($current_user -> user_firstname .
                                     $current_user -> user_lastname) > 0 ?
                 trim( $current_user -> user_firstname . " " . $current_user -> user_lastname ) :
-                __( 'Administrator', $this -> plug_lang );
+                __( 'Administrator', 'childify-me' );
 
         /* Do we need to import the parent style.css ? */
         $_has_parent_stylesheet_to_load = true;
@@ -230,7 +230,7 @@ EOF;
 
     //declares the plugin translation domain
     function cm_plugin_lang() {
-        load_plugin_textdomain( $this -> plug_lang , false, CM_DIR_NAME . '/lang' );
+        load_plugin_textdomain( 'childify-me' , false, CM_DIR_NAME . '/lang' );
     }
 
     function cm_customize_js_css() {
@@ -278,7 +278,7 @@ EOF;
             <div id="childify-container">
               <?php
                 printf('<span id="cm-info" class="cm-notice">%1$s</span>',
-                    __('Click on the button below to create a child theme', $this -> plug_lang )
+                    __('Click on the button below to create a child theme', 'childify-me' )
                 );
                 printf('<span id="cm-add-new" class="cm-add-new button button-primary" tabindex="0">%1$s
                     </span>',
@@ -294,22 +294,22 @@ EOF;
                             <span id="cm-create" class="button button-secondary" tabindex="0">%2$s</span><span class="button button-secondary" id="cm-cancel" tabindex="0">%3$s</span>
                         </div>
                     </div>',
-                    __( "Child theme name here" , $this -> plug_lang ),
-                    __( "Create" , $this -> plug_lang ),
-                    __( "Cancel" , $this -> plug_lang )
+                    __( "Child theme name here" , 'childify-me' ),
+                    __( "Create" , 'childify-me' ),
+                    __( "Cancel" , 'childify-me' )
                 );
                 printf('<div id="cm-success" class="updated"><p>%1$s <span id="cm-ctheme"></span> %2$s</p>%3$s</div>',
-                    __("Child theme", $this -> plug_lang ),
-                    __("successfully created!", $this -> plug_lang ),
+                    __("Child theme", 'childify-me' ),
+                    __("successfully created!", 'childify-me' ),
                     ( ! is_multisite() ) ?
                         sprintf('<a id="%3$s" class="button button-primary" href="%1$s" title="%2$s" tabindex="0">%2$s</a>',
                             sprintf('%1$s?theme=', admin_url( 'customize.php' ) ),
-                            __("Preview and Activate", $this -> plug_lang ),
+                            __("Preview and Activate", 'childify-me' ),
                             "cm-preview"
                         ) :
                         sprintf('<a id="%3$s" class="button button-primary" href="%1$s" title="%2$s" tabindex="0">%2$s</a>',
                             network_admin_url('themes.php'),
-                            __("Go to Network Themes", $this -> plug_lang ),
+                            __("Go to Network Themes", 'childify-me' ),
                             "cm-themes"
                         )
                 );
