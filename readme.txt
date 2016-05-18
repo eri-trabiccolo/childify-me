@@ -29,7 +29,7 @@ Child-theme's author dynamically generated from the user Name and Last Name, if 
 
 = Credits =
 
-* Thanks to [@nikeo](http://themesandco.com) for spurring me, testing my plugin and for his valuable advices
+* Thanks to [@nikeo](http://presscustomizr.com) for spurring me, testing my plugin and for his valuable advices
 * Thanks to [@rdellconsulting](http://www.rdellconsulting.com) for testing my plugin even on multisite and for his valuable advices
 * Image child.png generated on http://oojits.com/info/img/corner-ribbons/
 
