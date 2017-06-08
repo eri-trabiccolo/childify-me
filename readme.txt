@@ -87,6 +87,9 @@ From the Codex: http://codex.wordpress.org/Child_Themes
 That feature is implemented using some functions of the PHP GD module.
 So you need a PHP version >= 4.0 and the GD module installed and loaded.
 
+= Why for some themes the child-theme style.css uses the @import directive ? =
+Please read [this](https://wordpress.org/support/topic/needs-update-12/) topic
+
 == Screenshots ==
 
 1. Childify Me creating a child-theme of Customizr-Pro's from the Customizer
@@ -95,6 +98,10 @@ So you need a PHP version >= 4.0 and the GD module installed and loaded.
 4. Childify Me in multisite environment creating a child-theme of Twenty Twelve's from Live Preview
 
 == Changelog ==
+= 1.1.0 : June 08, 2017 =
+* Imp: generated screenshot size now follows latest wp recommandations
+* Fix: cm container was partially visible in the new open custom css box
+
 = 1.0.15 : May 12, 2016 =
 * Imp: Add domainpath and textdomain to the plugin header
 
