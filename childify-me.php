@@ -205,8 +205,8 @@ EOF;
                                         '/back/assets/img/child.png' );
 
         if ( function_exists('imagecreatetruecolor') ){
-            $dest = imagecreatetruecolor(880, 660);
-            imagecopy( $dest, $parent_src, 0, 0, 0, 0, 880, 660 );
+            $dest = imagecreatetruecolor(1200, 900);
+            imagecopy( $dest, $parent_src, 0, 0, 0, 0, 1200, 900 );
         }else
             $dest = $parent_src;
 
@@ -227,6 +227,7 @@ EOF;
 
         return $image;
     }
+
 
     //declares the plugin translation domain
     function cm_plugin_lang() {
