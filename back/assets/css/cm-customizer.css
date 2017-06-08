@@ -53,9 +53,11 @@
 #childify-container input[type=radio] {
     float: none;
 }
+.section-open #childify-container,
 .in-sub-panel #childify-container {
     left: -450px;
 }
+.rtl .section-open #childify-container,
 .rtl .in-sub-panel #childify-container { 
     left: auto; right: -450px; height: 0;
 }
