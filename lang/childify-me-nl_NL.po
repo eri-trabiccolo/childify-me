@@ -1,0 +1,56 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Childify Me\n"
+"POT-Creation-Date: 2015-05-06 15:21+0100\n"
+"PO-Revision-Date: 2015-05-06 15:35+0100\n"
+"Last-Translator: Rocco Aliberti\n"
+"Language-Team: Rock\n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.6\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../childify-me.php:105
+msgid "Error while trying to access the filesystem!"
+msgstr "Er is een fout opgetreden tijdens een poging om toegang tot het bestandssysteem te krijgen!"
+
+#: ../childify-me.php:134
+msgid "Administrator"
+msgstr "Beheerder"
+
+#: ../childify-me.php:261
+msgid "Click on the button below to create a child theme"
+msgstr "Klik op de onderstaande knop om een child-thema te maken"
+
+#: ../childify-me.php:277
+msgid "Child theme name here"
+msgstr "Child-thema naam hier"
+
+#: ../childify-me.php:278
+msgid "Create"
+msgstr "Creëren"
+
+#: ../childify-me.php:279
+msgid "Cancel"
+msgstr "Annuleren"
+
+#: ../childify-me.php:282
+msgid "Child theme"
+msgstr "Child-thema"
+
+#: ../childify-me.php:283
+msgid "successfully created!"
+msgstr "is succesvol aangemaakt!"
+
+#: ../childify-me.php:287
+msgid "Preview and Activate"
+msgstr "Voorbeeld en Activeren"
+
+#: ../childify-me.php:292
+msgid "Go to Network Themes"
+msgstr "Ga naar de netwerk themas"

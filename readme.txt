@@ -5,8 +5,8 @@ Plugin URI: https://github.com/eri-trabiccolo/childify-me
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=J8TFWAWQ8U3DN
 Tags: child theme, child-themes, childtheme, childthemes, custom theme, custom themeing, parent theme, child theme creator, child theme generator, child, theme, themes
 Requires at least: 3.4
-Tested up to: 4.5.2
-Stable tag: 1.0.15
+Tested up to: 4.8
+Stable tag: 1.1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -29,7 +29,7 @@ Child-theme's author dynamically generated from the user Name and Last Name, if 
 
 = Credits =
 
-* Thanks to [@nikeo](http://themesandco.com) for spurring me, testing my plugin and for his valuable advices
+* Thanks to [@nikeo](http://presscustomizr.com) for spurring me, testing my plugin and for his valuable advices
 * Thanks to [@rdellconsulting](http://www.rdellconsulting.com) for testing my plugin even on multisite and for his valuable advices
 * Image child.png generated on http://oojits.com/info/img/corner-ribbons/
 
@@ -87,6 +87,9 @@ From the Codex: http://codex.wordpress.org/Child_Themes
 That feature is implemented using some functions of the PHP GD module.
 So you need a PHP version >= 4.0 and the GD module installed and loaded.
 
+= Why for some themes the child-theme style.css uses the @import directive ? =
+Please read [this](https://wordpress.org/support/topic/needs-update-12/) topic
+
 == Screenshots ==
 
 1. Childify Me creating a child-theme of Customizr-Pro's from the Customizer
@@ -95,6 +98,10 @@ So you need a PHP version >= 4.0 and the GD module installed and loaded.
 4. Childify Me in multisite environment creating a child-theme of Twenty Twelve's from Live Preview
 
 == Changelog ==
+= 1.1.0 : June 08, 2017 =
+* Imp: generated screenshot size now follows latest wp recommandations
+* Fix: cm container was partially visible in the new open custom css box
+
 = 1.0.15 : May 12, 2016 =
 * Imp: Add domainpath and textdomain to the plugin header
 

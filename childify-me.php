@@ -3,7 +3,7 @@
  * Plugin Name: Childify Me
  * Plugin URI: https://github.com/eri-trabiccolo/childify-me
  * Description: Create a child theme from the Theme Customizer panel
- * Version: 1.0.15
+ * Version: 1.1.0
  * Author: Rocco Aliberti
  * Author URI: https://github.com/eri-trabiccolo
  * Text Domain: childify-me
@@ -40,7 +40,7 @@ class Childify_Me {
 
         self::$instance =& $this;
         $this -> plug_name     = 'Childify Me';
-        $this -> plug_version  = '1.0.15';
+        $this -> plug_version  = '1.1.0';
 
         //USEFUL CONSTANTS
         if ( ! defined( 'CM_DIR_NAME' ) ) {
@@ -205,8 +205,8 @@ EOF;
                                         '/back/assets/img/child.png' );
 
         if ( function_exists('imagecreatetruecolor') ){
-            $dest = imagecreatetruecolor(880, 660);
-            imagecopy( $dest, $parent_src, 0, 0, 0, 0, 880, 660 );
+            $dest = imagecreatetruecolor(1200, 900);
+            imagecopy( $dest, $parent_src, 0, 0, 0, 0, 1200, 900 );
         }else
             $dest = $parent_src;
 
@@ -227,6 +227,7 @@ EOF;
 
         return $image;
     }
+
 
     //declares the plugin translation domain
     function cm_plugin_lang() {
