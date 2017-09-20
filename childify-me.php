@@ -31,7 +31,8 @@ class Childify_Me {
     public $special_themes = array(
       'customizr' => array(),
       'customizr-pro' => array(),
-      'hueman' => array( 'version' => '3.0' )
+      'hueman' => array( 'version' => '3.0' ),
+      'hueman-pro' => array()
     );
 
     function __construct () {
