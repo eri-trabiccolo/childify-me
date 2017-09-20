@@ -5,8 +5,8 @@ Plugin URI: https://github.com/eri-trabiccolo/childify-me
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=J8TFWAWQ8U3DN
 Tags: child theme, child-themes, childtheme, childthemes, custom theme, custom themeing, parent theme, child theme creator, child theme generator, child, theme, themes
 Requires at least: 3.4
-Tested up to: 4.8
-Stable tag: 1.1.0
+Tested up to: 4.8.2
+Stable tag: 1.1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -98,6 +98,9 @@ Please read [this](https://wordpress.org/support/topic/needs-update-12/) topic
 4. Childify Me in multisite environment creating a child-theme of Twenty Twelve's from Live Preview
 
 == Changelog ==
+= 1.1.1 : September 20, 2017 =
+* Imp: add hueman-pro as special theme
+
 = 1.1.0 : June 08, 2017 =
 * Imp: generated screenshot size now follows latest wp recommandations
 * Fix: cm container was partially visible in the new open custom css box
