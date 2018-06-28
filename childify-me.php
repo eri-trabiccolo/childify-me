@@ -188,7 +188,7 @@ EOF;
 			/* create the child-theme screenshot.png */
 			if ( file_exists( $parent_theme_directory . '/screenshot.png' ) ) {
 				if ( extension_loaded( 'gd' ) && function_exists( 'gd_info' ) ) {
-					$screenshot = $this->cm_childify_screenshot( $parent_theme_directory . '/screenshot.png' );
+					$screenshot = $this->cm_screenshot( $parent_theme_directory . '/screenshot.png' );
 					$wp_filesystem->put_contents( $child_theme_directory . '/screenshot.png', $screenshot );
 				} else {
 					$wp_filesystem->copy( $parent_theme_directory . '/screenshot.png', $child_theme_directory . '/screenshot.png' );
