@@ -26,9 +26,10 @@ if ( ! class_exists( 'Childify_Me' ) ) :
 		/**
 		 * The plugin version, used as query var when enqueuing assets
 		 *
+		 * @static
 		 * @var string
 		 */
-		private $plug_version;
+		private static $plug_version = '1.2.0';
 
 		/**
 		 * Themes which do not need the style.css importing.
@@ -68,7 +69,6 @@ if ( ! class_exists( 'Childify_Me' ) ) :
 			// Only run these methods if they haven't been run previously.
 			if ( null === $instance ) {
 				$instance           = new Childify_Me();
-				$this->plug_version = '1.2.0';
 
 				// USEFUL CONSTANTS.
 				if ( ! defined( 'CM_DIR_NAME' ) ) {
@@ -82,9 +82,9 @@ if ( ! class_exists( 'Childify_Me' ) ) :
 				}
 
 				// adds plugin text domain.
-				add_action( 'plugins_loaded', array( $this, 'cm_plugin_lang' ) );
+				add_action( 'plugins_loaded', array( $instance, 'cm_plugin_lang' ) );
 				// setup hooks.
-				add_action( 'plugins_loaded', array( $this, 'cm_plugin_setup_hooks' ) );
+				add_action( 'plugins_loaded', array( $instance, 'cm_plugin_setup_hooks' ) );
 			}
 
 			// Always return the instance.
@@ -340,7 +340,7 @@ EOF;
 					( defined( 'WP_DEBUG' ) && WP_DEBUG ) ? '' : '.min'
 				),
 				array( 'customize-controls' ),
-				$this->plug_version,
+				self::$plug_version,
 				$media = 'all'
 			);
 
@@ -351,7 +351,7 @@ EOF;
 					( defined( 'WP_DEBUG' ) && WP_DEBUG ) ? '' : '.min'
 				),
 				array( 'customize-controls', 'underscore' ),
-				$this->plug_version,
+				self::$plug_version,
 				true
 			);
 
