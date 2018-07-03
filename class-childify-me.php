@@ -68,7 +68,7 @@ if ( ! class_exists( 'Childify_Me' ) ) :
 
 			// Only run these methods if they haven't been run previously.
 			if ( null === $instance ) {
-				$instance           = new Childify_Me();
+				$instance = new Childify_Me();
 
 				// USEFUL CONSTANTS.
 				if ( ! defined( 'CM_DIR_NAME' ) ) {
@@ -145,14 +145,10 @@ if ( ! class_exists( 'Childify_Me' ) ) :
 				wp_die( -1 );
 			}
 
-			if ( empty( $_POST['parent'] ) || empty( $_POST['cm-cname'] ) ) {
-				wp_die( 0 );
-			}
+			$_parent  = empty( $_POST['parent'] ) ? '' : sanitize_text_field( wp_unslash( $_POST['parent'] ) );
+			$_cm_name = empty( $_POST['cm-cname'] ) ? '' : sanitize_text_field( wp_unslash( $_POST['cm-cname'] ) );
 
-			$_parent  = sanitize_text_field( wp_unslash( $_POST['parent'] ) );
-			$_cm_name = sanitize_text_field( wp_unslash( $_POST['cm-cname'] ) );
-
-			if ( wp_get_theme( $_parent )->parent() ) {
+			if ( empty( $_parent ) || empty( $_cm_name ) || wp_get_theme( $_parent )->parent() ) {
 				wp_die( 0 );
 			}
 
