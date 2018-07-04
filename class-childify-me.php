@@ -89,7 +89,7 @@ if ( ! class_exists( 'Childify_Me' ) ) :
 
 			// Always return the instance.
 			return $instance;
-		}
+		}//end instance()
 
 
 		/**
@@ -123,12 +123,12 @@ if ( ! class_exists( 'Childify_Me' ) ) :
 			add_action( 'wp_ajax_' . CM_CACTION,
 				array( $this, 'cm_create_child_theme' )
 			);
-		}
+		}//end cm_plugin_setup_hooks()
 
 
 
 		/**
-		 * AJAX Callback
+		 * AJAX Ccllback
 		 * Here is where we do our security checks and sanitize teh $_POST data
 		 *
 		 * @since 1.0.0
@@ -158,7 +158,7 @@ if ( ! class_exists( 'Childify_Me' ) ) :
 			);
 
 			wp_die();
-		}
+		}//end cm_create_child_theme()
 
 
 		/**
@@ -300,7 +300,7 @@ EOF;
 			}
 
 			return $image;
-		}
+		}//end cm_screenshot()
 
 
 		/**
@@ -312,7 +312,7 @@ EOF;
 		 */
 		public function cm_plugin_lang() {
 			load_plugin_textdomain( 'childify-me', false, CM_DIR_NAME . '/lang' );
-		}
+		}//end cm_plugin_lang()
 
 
 
@@ -361,7 +361,7 @@ EOF;
 					'Parent'  => $current_stylesheet,
 				)
 			);
-		}
+		}//end cm_customize_js_css()
 
 
 
@@ -417,7 +417,7 @@ EOF;
 				</div>
 			</script>
 			<?php
-		}
+		}//end cm_print_template()
 	}//end class
 
 endif;
