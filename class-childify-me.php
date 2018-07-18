@@ -248,13 +248,22 @@ EOF;
 			$child_functionsphp = trailingslashit( $child_theme_directory ) . 'functions.php';
 			$wp_filesystem->put_contents( $child_functionsphp, $child_functionsphp_content );
 
-			/* create the child-theme screenshot.png */
-			if ( file_exists( $parent_theme_directory . '/screenshot.png' ) ) {
+			/* create the child-theme screenshot.(png|jpeg|jpg) */
+			foreach ( array( 'png', 'jpg', 'jpeg' ) as $parent_screenshot_extension ) {
+				if ( file_exists( $parent_theme_directory . '/screenshot.' . $parent_screenshot_extension ) ) {
+					$parent_screenshot = $parent_theme_directory . '/screenshot.' . $parent_screenshot_extension;
+					break;
+				}
+			}
+
+			if ( isset( $parent_screenshot ) ) {
 				if ( extension_loaded( 'gd' ) && function_exists( 'gd_info' ) ) {
-					$screenshot = $this->cm_screenshot( $parent_theme_directory . '/screenshot.png' );
-					$wp_filesystem->put_contents( $child_theme_directory . '/screenshot.png', $screenshot );
+					$screenshot = $this->cm_screenshot( $parent_screenshot, $parent_screenshot_extension );
+					if ( $screenshot ) {
+						$wp_filesystem->put_contents( $child_theme_directory . '/screenshot.png', $screenshot );
+					}
 				} else {
-					$wp_filesystem->copy( $parent_theme_directory . '/screenshot.png', $child_theme_directory . '/screenshot.png' );
+					$wp_filesystem->copy( $parent_theme_directory . '/screenshot.' . $parent_screenshot_extension, $child_theme_directory . '/screenshot.' . $parent_screenshot_extension );
 				}
 			}
 
@@ -268,18 +277,30 @@ EOF;
 		 *
 		 * @since 1.0.0
 		 *
-		 * @param string $screenshot The parent theme screenshot file name.
+		 * @param string $parent_screenshot The parent theme screenshot file name.
+		 * @param string $parent_screenshot_extension The parent theme screenshot file extension (jpg or png).
 		 *
-		 * @return image The child-theme screenshot image content.
+		 * @return image|bool The child-theme screenshot image content, or false.
 		 */
-		private function cm_screenshot( $screenshot ) {
+		private function cm_screenshot( $parent_screenshot, $parent_screenshot_extension ) {
 			// create screenshot image(string): overlay of parent screenshot + childify-me badge.
-			$parent_src = imagecreatefrompng( $screenshot );
-			$cm_src     = imagecreatefrompng( plugin_dir_path( __FILE__ ) . '/back/assets/img/child.png' );
+			$parent_src = 'png' === $parent_screenshot_extension ? imagecreatefrompng( $parent_screenshot ) : imagecreatefromjpeg( $parent_screenshot );
+
+			// parent_size.
+			list( $parent_width, $parent_height ) = getimagesize( $parent_screenshot );
+
+			// default size.
+			$parent_width  = $parent_width ? $parent_width : 1200;
+			$parent_height = $parent_height ? $parent_height : 900;
+			$cm_src        = imagecreatefrompng( plugin_dir_path( __FILE__ ) . '/back/assets/img/child.png' );
+
+			if ( ! $parent_src || ! $cm_src ) {
+				return false;
+			}
 
 			if ( function_exists( 'imagecreatetruecolor' ) ) {
-				$dest = imagecreatetruecolor( 1200, 900 );
-				imagecopy( $dest, $parent_src, 0, 0, 0, 0, 1200, 900 );
+				$dest = imagecreatetruecolor( $parent_width, $parent_height );
+				imagecopy( $dest, $parent_src, 0, 0, 0, 0, $parent_width, $parent_height );
 			} else {
 				$dest = $parent_src;
 			}
