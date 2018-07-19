@@ -1,7 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Childify Me\n"
-"POT-Creation-Date: 2015-05-06 15:23+0100\n"
+"Project-Id-Version: Childify Me 1.1.1\n"
+"Report-Msgid-Bugs-To: https://github.com/eri-trabiccolo/childify-me/\n"
+"POT-Creation-Date: 2018-07-19 06:47:18+00:00\n"
 "PO-Revision-Date: 2015-05-06 15:24+0100\n"
 "Last-Translator: Yaacov Glezer\n"
 "Language-Team: JTS <info@eksi.net>\n"
@@ -17,45 +18,66 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: ../childify-me.php:105
+#: class-childify-me.php:186
 msgid "Error while trying to access the filesystem!"
 msgstr "ארעה שגיאה בניסיון גישה למערכת הקבצים!"
 
-#: ../childify-me.php:134
+#: class-childify-me.php:212
 msgid "Administrator"
 msgstr "מנהל"
 
-#: ../childify-me.php:261
+#: class-childify-me.php:402
 msgid "Click on the button below to create a child theme"
 msgstr "לחץ על הכפתור למטה כדי ליצור תבנית-בת"
 
-#: ../childify-me.php:277
+#: class-childify-me.php:418
 msgid "Child theme name here"
 msgstr "שם תבנית הבת"
 
-#: ../childify-me.php:278
+#: class-childify-me.php:419
 msgid "Create"
 msgstr "יצירה"
 
-#: ../childify-me.php:279
+#: class-childify-me.php:420
 msgid "Cancel"
 msgstr "ביטול"
 
-#: ../childify-me.php:282
+#: class-childify-me.php:423
 msgid "Child theme"
 msgstr "תבנית-בת"
 
-#: ../childify-me.php:283
+#: class-childify-me.php:424
 msgid "successfully created!"
 msgstr "נוצרה בהצלחה!"
 
-#: ../childify-me.php:287
+#: class-childify-me.php:428
 msgid "Preview and Activate"
 msgstr "תצוגה מקדימה והפעלה"
 
-#: ../childify-me.php:292
+#: class-childify-me.php:433
 msgid "Go to Network Themes"
 msgstr "מעבר לתבניות רשת"
+
+#. Plugin Name of the plugin/theme
+#, fuzzy
+msgid "Childify Me"
+msgstr "תבנית-בת"
+
+#. Plugin URI of the plugin/theme
+msgid "https://github.com/eri-trabiccolo/childify-me"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Create a child theme from the Theme Customizer panel"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Rocco Aliberti"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://github.com/eri-trabiccolo"
+msgstr ""
 
 #~ msgid "Error while trying to access to the filesystem!"
 #~ msgstr "שגיאה במהלך גישה למערכת הקבצים!"

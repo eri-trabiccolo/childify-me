@@ -1,7 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Childify Me\n"
-"POT-Creation-Date: 2016-05-12 11:10+0200\n"
+"Project-Id-Version: Childify Me 1.1.1\n"
+"Report-Msgid-Bugs-To: https://github.com/eri-trabiccolo/childify-me/\n"
+"POT-Creation-Date: 2018-07-19 06:47:18+00:00\n"
 "PO-Revision-Date: 2016-05-12 11:10+0200\n"
 "Last-Translator: Rocco Aliberti\n"
 "Language-Team: Rock\n"
@@ -15,45 +16,66 @@ msgstr ""
 "X-Poedit-KeywordsList: __;_e\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: ../childify-me.php:115
+#: class-childify-me.php:186
 msgid "Error while trying to access the filesystem!"
 msgstr "Si è verificato un errore nell'accesso al filesystem!"
 
-#: ../childify-me.php:145
+#: class-childify-me.php:212
 msgid "Administrator"
 msgstr "Amministratore"
 
-#: ../childify-me.php:281
+#: class-childify-me.php:402
 msgid "Click on the button below to create a child theme"
 msgstr "Clicca sul pulsante sottostante per creare un tema figlio"
 
-#: ../childify-me.php:297
+#: class-childify-me.php:418
 msgid "Child theme name here"
 msgstr "Inserisci il nome del tema figlio"
 
-#: ../childify-me.php:298
+#: class-childify-me.php:419
 msgid "Create"
 msgstr "Crea"
 
-#: ../childify-me.php:299
+#: class-childify-me.php:420
 msgid "Cancel"
 msgstr "Annulla"
 
-#: ../childify-me.php:302
+#: class-childify-me.php:423
 msgid "Child theme"
 msgstr "Tema figlio"
 
-#: ../childify-me.php:303
+#: class-childify-me.php:424
 msgid "successfully created!"
 msgstr "creato con successo!"
 
-#: ../childify-me.php:307
+#: class-childify-me.php:428
 msgid "Preview and Activate"
 msgstr "Preview e Attiva"
 
-#: ../childify-me.php:312
+#: class-childify-me.php:433
 msgid "Go to Network Themes"
 msgstr "Temi di Rete"
+
+#. Plugin Name of the plugin/theme
+#, fuzzy
+msgid "Childify Me"
+msgstr "Tema figlio"
+
+#. Plugin URI of the plugin/theme
+msgid "https://github.com/eri-trabiccolo/childify-me"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Create a child theme from the Theme Customizer panel"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Rocco Aliberti"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://github.com/eri-trabiccolo"
+msgstr ""
 
 #~ msgid "Error while trying to access to the filesystem!"
 #~ msgstr "Si è verificato un errore nell'accesso al filesystem!"

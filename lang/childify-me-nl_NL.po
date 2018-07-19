@@ -1,7 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Childify Me\n"
-"POT-Creation-Date: 2015-05-06 15:21+0100\n"
+"Project-Id-Version: Childify Me 1.1.1\n"
+"Report-Msgid-Bugs-To: https://github.com/eri-trabiccolo/childify-me/\n"
+"POT-Creation-Date: 2018-07-19 06:47:18+00:00\n"
 "PO-Revision-Date: 2015-05-06 15:35+0100\n"
 "Last-Translator: Rocco Aliberti\n"
 "Language-Team: Rock\n"
@@ -15,42 +16,65 @@ msgstr ""
 "X-Poedit-KeywordsList: __;_e\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: ../childify-me.php:105
+#: class-childify-me.php:186
 msgid "Error while trying to access the filesystem!"
-msgstr "Er is een fout opgetreden tijdens een poging om toegang tot het bestandssysteem te krijgen!"
+msgstr ""
+"Er is een fout opgetreden tijdens een poging om toegang tot het "
+"bestandssysteem te krijgen!"
 
-#: ../childify-me.php:134
+#: class-childify-me.php:212
 msgid "Administrator"
 msgstr "Beheerder"
 
-#: ../childify-me.php:261
+#: class-childify-me.php:402
 msgid "Click on the button below to create a child theme"
 msgstr "Klik op de onderstaande knop om een child-thema te maken"
 
-#: ../childify-me.php:277
+#: class-childify-me.php:418
 msgid "Child theme name here"
 msgstr "Child-thema naam hier"
 
-#: ../childify-me.php:278
+#: class-childify-me.php:419
 msgid "Create"
 msgstr "Creëren"
 
-#: ../childify-me.php:279
+#: class-childify-me.php:420
 msgid "Cancel"
 msgstr "Annuleren"
 
-#: ../childify-me.php:282
+#: class-childify-me.php:423
 msgid "Child theme"
 msgstr "Child-thema"
 
-#: ../childify-me.php:283
+#: class-childify-me.php:424
 msgid "successfully created!"
 msgstr "is succesvol aangemaakt!"
 
-#: ../childify-me.php:287
+#: class-childify-me.php:428
 msgid "Preview and Activate"
 msgstr "Voorbeeld en Activeren"
 
-#: ../childify-me.php:292
+#: class-childify-me.php:433
 msgid "Go to Network Themes"
 msgstr "Ga naar de netwerk themas"
+
+#. Plugin Name of the plugin/theme
+#, fuzzy
+msgid "Childify Me"
+msgstr "Child-thema"
+
+#. Plugin URI of the plugin/theme
+msgid "https://github.com/eri-trabiccolo/childify-me"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Create a child theme from the Theme Customizer panel"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Rocco Aliberti"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://github.com/eri-trabiccolo"
+msgstr ""
