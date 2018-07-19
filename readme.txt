@@ -5,7 +5,7 @@ Plugin URI: https://github.com/eri-trabiccolo/childify-me
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=J8TFWAWQ8U3DN
 Tags: child theme, child-themes, childtheme, childthemes, custom theme, custom themeing, parent theme, child theme creator, child theme generator, child, theme, themes
 Requires at least: 3.4
-Tested up to: 4.8.2
+Tested up to: 4.9.7
 Stable tag: 1.1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -22,7 +22,7 @@ Multisite compatible.
 
 = Plugin Features =
 
-Ftp credential requests handled in the Customizer.
+FTP credential requests handled in the Customizer.
 **Child-theme's screenshot generated** from the parent screenshot, with a ribbon dynamically added.
 Child-theme's author dynamically generated from the user Name and Last Name, if set, otherwise falls back on a generic "Administrator".
 
@@ -36,15 +36,12 @@ Child-theme's author dynamically generated from the user Name and Last Name, if 
 
 = Translations =
 
-The plugin is [translation ready](http://codex.wordpress.org/Translating_WordPress), the default .mo and .po files are inluded in /lang.
+The plugin is [translation ready](http://codex.wordpress.org/Translating_WordPress), .pot file included in /lang.
 
-Childify-Me is currently available in the following languages:
+Childify-Me is also available in the following languages:
 
-* Italian    ( by ME, which doesn't stay for Millennium Edition :P ) 
 * Russian    ( by [@baneff](https://wordpress.org/support/profile/baneff) )
 * Ukrainian  ( by [@baneff](https://wordpress.org/support/profile/baneff) )
-* Portuguese ( by [@wph4](http://h4bs.com/) )
-* Dutch      ( by [@wph4](http://h4bs.com/) )
 * Hebrew     ( by [@JTS-IL](http://www.glezer.co.il) )
 
 Many thanks to these generous users :)
@@ -52,10 +49,10 @@ Many thanks to these generous users :)
 
 == Installation ==
 
-1. Install the plugin right from your WordPress admin in plugins > Add New. 
+1. Install the plugin right from your WordPress admin in plugins > Add New.
 1-bis. Download the plugin, unzip the package and upload it to your /wp-content/plugins/ directory
 2. Activate the plugin
-3. Go to Appearance -> Customize and you'll see the "Childify Me" button. 
+3. Go to Appearance -> Customize and you'll see the "Childify Me" button.
 3-bis. In Appearance -> Themes, hover on a non-child theme and click on Live Preview, once there you'll see the "Childify Me" button
 
 == Frequently Asked Questions ==
@@ -79,8 +76,8 @@ This is because some options aren't really part of the theme options.
 Basically you can consider them as options related to theme. Wordpress saves them in a different db row of the wp-options table.
 From the Codex: http://codex.wordpress.org/Child_Themes
 
-**Note:** You may need to re-save your menu (Appearance > Menus, or Appearance > Customize > Menus) and theme options 
-(including background and header images) after activating the child theme. 
+**Note:** You may need to re-save your menu (Appearance > Menus, or Appearance > Customize > Menus) and theme options
+(including background and header images) after activating the child theme.
 
 = Why my child-theme's screenshot doesn't have the ribbon? =
 
@@ -125,7 +122,7 @@ Please read [this](https://wordpress.org/support/topic/needs-update-12/) topic
 * Fix: readme typo
 
 = 1.0.9 : May 06, 2015 =
-* Add: added Portuguese and Dutch translations: Many thanks to <a href="http://h4bs.com/">@wph4</a> 
+* Add: added Portuguese and Dutch translations: Many thanks to <a href="http://h4bs.com/">@wph4</a>
 
 = 1.0.8 : April 21, 2015 =
 * Fix: minor css fix to radio buttons
@@ -147,7 +144,7 @@ Please read [this](https://wordpress.org/support/topic/needs-update-12/) topic
 * Fix: handle parent 8 bit colormap screenshot.png
 
 = 1.0.2 : January 19, 2015 =
-* Fix: cancel button bug, css form padding 
+* Fix: cancel button bug, css form padding
 
 = 1.0.1 : January 19, 2015 =
 * Fix: improve compatibility with PHP versions < 3.5.3
