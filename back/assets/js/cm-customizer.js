@@ -1,4 +1,4 @@
-/*!Childify Me plugin by Rocco Aliberti, GPL2+ licensed */
+/*! Childify Me plugin by Rocco Aliberti, GPL2+ licensed */
 /*
  * TODO:
  * - better errors handling?
