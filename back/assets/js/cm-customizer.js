@@ -4,7 +4,7 @@
  * - better errors handling?
  * - better validation, suppress *?\.. chars ?
 **/
-!( function ($) {
+jQuery( function ( $ ) {
     var Selector = {
             MAIN_PANEL         : '#customize-info',
             TEMPLATE           : 'script#childify-tpl',
@@ -212,4 +212,4 @@
         set_action_buttons( false );
         $( Selector.CHILDIFY_CONTAINER ).css( 'display', 'block' );
     });
-})(jQuery);
+});

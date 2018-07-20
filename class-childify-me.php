@@ -357,7 +357,7 @@ EOF;
 					( defined( 'WP_DEBUG' ) && WP_DEBUG ) ? '' : '.min'
 				),
 				array( 'customize-controls' ),
-				self::$plug_version,
+				( defined( 'WP_DEBUG' ) && WP_DEBUG ) ? time() : self::$plug_version,
 				$media = 'all'
 			);
 
@@ -368,7 +368,7 @@ EOF;
 					( defined( 'WP_DEBUG' ) && WP_DEBUG ) ? '' : '.min'
 				),
 				array( 'customize-controls', 'underscore' ),
-				self::$plug_version,
+				( defined( 'WP_DEBUG' ) && WP_DEBUG ) ? time() : self::$plug_version,
 				true
 			);
 
