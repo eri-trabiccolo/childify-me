@@ -292,7 +292,7 @@ EOF;
 			// default size.
 			$parent_width  = $parent_width ? $parent_width : 1200;
 			$parent_height = $parent_height ? $parent_height : 900;
-			$cm_src        = imagecreatefrompng( plugin_dir_path( __FILE__ ) . '/back/assets/img/child.png' );
+			$cm_src        = imagecreatefrompng( plugin_dir_path( __FILE__ ) . '/back/assets/img/childify-me-badge.png' );
 
 			if ( ! $parent_src || ! $cm_src ) {
 				return false;
@@ -305,7 +305,7 @@ EOF;
 				$dest = $parent_src;
 			}
 
-			imagecopy( $dest, $cm_src, 0, 0, 0, 0, 350, 350 );
+			imagecopy( $dest, $cm_src, 0, 0, 0, 0, 287, 175 );
 
 			ob_start();
 				header( 'Content-Type: image/png' );
