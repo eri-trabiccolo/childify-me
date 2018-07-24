@@ -19,7 +19,17 @@ module.exports = {
 			to: 'Stable tag: <%= pkg.version %>'
 		} ]
 	},
-	main : {
+	main_header : {
+		src: [
+			'childify-me.php'
+		],
+		overwrite: true,
+		replacements: [ {
+			from: /^ \* Version: .*$/m,
+			to: ' * Version: <%= pkg.version %>'
+		} ]
+	},
+	main_class : {
 		src: [
 			'class-childify-me.php'
 		],

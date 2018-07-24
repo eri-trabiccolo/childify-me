@@ -17,7 +17,7 @@ module.exports = function(grunt) {
         	textdomain: 'childify-me'
         },
        	tasks : {
-       		'build' : [ /*'replace',*/ 'uglify', 'addtextdomain', 'makepot', 'potomo', 'cssmin' ]
+       		'build' : [ 'replace', 'uglify', 'addtextdomain', 'makepot', 'potomo', 'cssmin' ]
        	},
        	uglify_requested_paths : {
        	  src : '' || grunt.option('src'),
