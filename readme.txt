@@ -31,7 +31,6 @@ Child-theme's author dynamically generated from the user Name and Last Name, if 
 
 * Thanks to [@nikeo](http://presscustomizr.com) for spurring me, testing my plugin and for his valuable advices
 * Thanks to [@rdellconsulting](http://www.rdellconsulting.com) for testing my plugin even on multisite and for his valuable advices
-* Image child.png generated on http://oojits.com/info/img/corner-ribbons/
 
 
 = Translations =
@@ -95,6 +94,14 @@ Please read [this](https://wordpress.org/support/topic/needs-update-12/) topic
 4. Childify Me in multisite environment creating a child-theme of Twenty Twelve's from Live Preview
 
 == Changelog ==
+= 1.2.0 : July 24, 2018 =
+* Imp: improve WP PHPcs
+* Imp: autodetect parent screenshot size
+* Imp: create child screenshot png also from parent jpeg files
+* Imp: improve javascript
+* Imp: improve child badge
+* Rm: remove translations already hosted on wp.org
+
 = 1.1.1 : September 20, 2017 =
 * Imp: add hueman-pro as special theme
 
