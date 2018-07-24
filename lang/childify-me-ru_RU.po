@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Childify Me 1.1.1\n"
+"Project-Id-Version: Childify Me 1.2.0\n"
 "Report-Msgid-Bugs-To: https://github.com/eri-trabiccolo/childify-me/\n"
 "POT-Creation-Date: 2018-07-19 06:47:18+00:00\n"
 "PO-Revision-Date: 2015-05-06 15:23+0100\n"
