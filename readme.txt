@@ -5,7 +5,7 @@ Plugin URI: https://github.com/eri-trabiccolo/childify-me
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=J8TFWAWQ8U3DN
 Tags: child theme, child-themes, childtheme, childthemes, custom theme, custom themeing, parent theme, child theme creator, child theme generator, child, theme, themes
 Requires at least: 3.4
-Tested up to: 4.9.7
+Tested up to: 4.9.8
 Stable tag: 1.2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -35,15 +35,21 @@ Child-theme's author dynamically generated from the user Name and Last Name, if 
 
 = Translations =
 
-The plugin is [translation ready](http://codex.wordpress.org/Translating_WordPress), .pot file included in /lang.
+The plugin is [translation ready](https://make.wordpress.org/polyglots/handbook/).
 
-Childify-Me is also available in the following languages:
+Most of the previously bundled Childify Me translations (see the list below) have been succesfully ported to [translate.wordpress.org](https://translate.wordpress.org/projects/wp-plugins/childify-me).
+
+* German     ( by [@presskopp](https://profiles.wordpress.org/presskopp/) )
+* Portuguese ( by [@wph4](http://h4bs.com/) )
+* Dutch      ( by [@wph4](http://h4bs.com/) )
+
+Childify Me also bundles the following languages (.pot file included in childify-me/lang):
 
 * Russian    ( by [@baneff](https://wordpress.org/support/profile/baneff) )
 * Ukrainian  ( by [@baneff](https://wordpress.org/support/profile/baneff) )
 * Hebrew     ( by [@JTS-IL](http://www.glezer.co.il) )
 
-Many thanks to these generous users :)
+**Many thanks to these generous users :)**
 
 
 == Installation ==
