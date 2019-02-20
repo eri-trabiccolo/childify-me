@@ -6,7 +6,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: child theme, child-themes, childtheme, childthemes, custom theme, custom themeing, parent theme, child theme creator, child theme generator, child, theme, themes
 Requires at least: 3.4
 Tested up to: 5.1.0
-Stable tag: 1.2.0
+Stable tag: 1.2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -100,6 +100,10 @@ Please read [this](https://wordpress.org/support/topic/needs-update-12/) topic
 4. Childify Me in multisite environment creating a child-theme of Twenty Twelve's from Live Preview
 
 == Changelog ==
+= 1.2.1 : February 20, 2010 =
+* capitalPdangit(readme.txt)
+* bump Tested up to
+
 = 1.2.0 : July 24, 2018 =
 * Imp: improve WP PHPcs
 * Imp: autodetect parent screenshot size
