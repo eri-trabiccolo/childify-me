@@ -5,7 +5,7 @@ Plugin URI: https://github.com/eri-trabiccolo/childify-me
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=J8TFWAWQ8U3DN
 Tags: child theme, child-themes, childtheme, childthemes, custom theme, custom themeing, parent theme, child theme creator, child theme generator, child, theme, themes
 Requires at least: 3.4
-Tested up to: 5.0
+Tested up to: 5.1.0
 Stable tag: 1.2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -78,7 +78,7 @@ non-active theme, hover on a non-child theme and click on Live Preview)
 = I created a child-theme but I lost my menu, how so? =
 
 This is because some options aren't really part of the theme options.
-Basically you can consider them as options related to theme. Wordpress saves them in a different db row of the wp-options table.
+Basically you can consider them as options related to theme. WordPress saves them in a different db row of the wp-options table.
 From the Codex: http://codex.wordpress.org/Child_Themes
 
 **Note:** You may need to re-save your menu (Appearance > Menus, or Appearance > Customize > Menus) and theme options
@@ -122,11 +122,11 @@ Please read [this](https://wordpress.org/support/topic/needs-update-12/) topic
 * Add: Improved child-theme creation for Hueman theme
 * Imp: small css fixes
 * Imp: restrict plugin scope to is_admin() == true
-* Upd: update Tested up to wordpress version version 4.5.1
+* Upd: update Tested up to WordPress version version 4.5.1
 
 = 1.0.13 : Nov 26, 2015 =
 * Add: Fix rtl CSS: Many thanks to <a href="http://www.glezer.co.il">Yaacov Glezer</a>
-* Upd: update Tested up to wordpress version version 4.4
+* Upd: update Tested up to WordPress version version 4.4
 
 = 1.0.11 : Sep 08, 2015 =
 * Add: Hebrew translation: Many thanks to <a href="http://www.glezer.co.il">Yaacov Glezer</a>
