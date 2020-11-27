@@ -2,7 +2,6 @@
     font-size: 15px;
     font-weight: 500;
     padding: 4px 14px;
-    height: 35px;
 }
 #childify-container .button-primary:hover {
     opacity: 0.8;
@@ -34,6 +33,10 @@
     -webkit-transition: left ease-in-out .18s;
     transition: left ease-in-out .18s;
     margin-top: 20px;
+}
+#childify-container > * {
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 #childify-container form {
     padding: 15px 15px 15px 15px;

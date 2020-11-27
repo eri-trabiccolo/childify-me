@@ -3,8 +3,10 @@
  *
  * Main Childify-Me Class File
  *
- * @author Rocco Aliberti
  * @package Childify-Me
+ *
+ * @author Rocco Aliberti
+ *
  * @since 1.0.0
  */
 
@@ -29,7 +31,7 @@ if ( ! class_exists( 'Childify_Me' ) ) :
 		 * @static
 		 * @var string
 		 */
-		private static $plug_version = '1.2.0';
+		private static $plug_version = '1.2.2';
 
 		/**
 		 * Themes which do not need the style.css importing.
@@ -46,6 +48,7 @@ if ( ! class_exists( 'Childify_Me' ) ) :
 
 		/**
 		 * Main Childify_Me Instance.
+		 *
 		 * Please load it only one time.
 		 *
 		 * Insures that only one instance of Childify_Me exists in memory at any
@@ -89,8 +92,7 @@ if ( ! class_exists( 'Childify_Me' ) ) :
 
 			// Always return the instance.
 			return $instance;
-		}//end instance()
-
+		}
 
 		/**
 		 * A dummy constructor to prevent Childify_Me from being loaded more than once.
@@ -111,30 +113,34 @@ if ( ! class_exists( 'Childify_Me' ) ) :
 		 * @hook plugins_loaded
 		 */
 		public function cm_plugin_setup_hooks() {
-			add_action( 'customize_controls_enqueue_scripts',
+			add_action(
+				'customize_controls_enqueue_scripts',
 				array( $this, 'cm_customize_js_css' ),
 				100
 			);
 
-			add_action( 'customize_controls_print_footer_scripts',
+			add_action(
+				'customize_controls_print_footer_scripts',
 				array( $this, 'cm_print_template' )
 			);
 
-			add_action( 'wp_ajax_' . CM_CACTION,
+			add_action(
+				'wp_ajax_' . CM_CACTION,
 				array( $this, 'cm_create_child_theme' )
 			);
-		}//end cm_plugin_setup_hooks()
+		}
 
 
 
 		/**
-		 * AJAX Ccllback
-		 * Here is where we do our security checks and sanitize teh $_POST data
+		 * AJAX Callback
+		 *
+		 * Here is where we do our security checks and sanitize teh $_POST data.
 		 *
 		 * @since 1.0.0
 		 */
 		public function cm_create_child_theme() {
-			// ajax callback.
+
 			if ( ! is_user_logged_in() ) {
 				wp_die( 0 );
 			}
@@ -158,8 +164,7 @@ if ( ! class_exists( 'Childify_Me' ) ) :
 			);
 
 			wp_die();
-		}//end cm_create_child_theme()
-
+		}
 
 		/**
 		 * The actual method which will create the child-theme.
@@ -197,7 +202,7 @@ if ( ! class_exists( 'Childify_Me' ) ) :
 			$child_theme_directory  = trailingslashit( get_theme_root() ) . sanitize_file_name( strtolower( $child ) );
 			$parent_theme_directory = $current_theme->get_stylesheet_directory();
 			$i                      = 2;
-			$suffix                 = '';// incremental dirname.
+			$suffix                 = '';// Incremental dirname.
 
 			while ( $wp_filesystem->is_dir( $child_theme_directory . $suffix ) ) {
 				$suffix = '_' . $i;
@@ -248,7 +253,7 @@ EOF;
 			$child_functionsphp = trailingslashit( $child_theme_directory ) . 'functions.php';
 			$wp_filesystem->put_contents( $child_functionsphp, $child_functionsphp_content );
 
-			/* create the child-theme screenshot.(png|jpeg|jpg) */
+			/* Create the child-theme screenshot.(png|jpeg|jpg) */
 			foreach ( array( 'png', 'jpg', 'jpeg' ) as $parent_screenshot_extension ) {
 				if ( file_exists( $parent_theme_directory . '/screenshot.' . $parent_screenshot_extension ) ) {
 					$parent_screenshot = $parent_theme_directory . '/screenshot.' . $parent_screenshot_extension;
@@ -268,7 +273,7 @@ EOF;
 			}
 
 			wp_send_json_success( array( 'stylesheet' => sanitize_file_name( strtolower( $child ) ) ) );
-		}//end cm_do_create_child_theme()
+		}
 
 
 
@@ -283,13 +288,13 @@ EOF;
 		 * @return image|bool The child-theme screenshot image content, or false.
 		 */
 		private function cm_screenshot( $parent_screenshot, $parent_screenshot_extension ) {
-			// create screenshot image(string): overlay of parent screenshot + childify-me badge.
+			// Create screenshot image(string): overlay of parent screenshot + childify-me badge.
 			$parent_src = 'png' === $parent_screenshot_extension ? imagecreatefrompng( $parent_screenshot ) : imagecreatefromjpeg( $parent_screenshot );
 
-			// parent_size.
+			// Parent_size.
 			list( $parent_width, $parent_height ) = getimagesize( $parent_screenshot );
 
-			// default size.
+			// Default size.
 			$parent_width  = $parent_width ? $parent_width : 1200;
 			$parent_height = $parent_height ? $parent_height : 900;
 			$cm_src        = imagecreatefrompng( plugin_dir_path( __FILE__ ) . '/back/assets/img/childify-me-badge.png' );
@@ -321,8 +326,7 @@ EOF;
 			}
 
 			return $image;
-		}//end cm_screenshot()
-
+		}
 
 		/**
 		 * A method to load the plugin textdomain.
@@ -333,7 +337,7 @@ EOF;
 		 */
 		public function cm_plugin_lang() {
 			load_plugin_textdomain( 'childify-me', false, CM_DIR_NAME . '/lang' );
-		}//end cm_plugin_lang()
+		}
 
 
 
@@ -341,6 +345,7 @@ EOF;
 		 * A method to enqueue CSS and JS assets.
 		 *
 		 * @since 1.0.0
+		 *
 		 * @hook customize_controls_enqueue_scripts
 		 */
 		public function cm_customize_js_css() {
@@ -382,18 +387,18 @@ EOF;
 					'Parent'  => $current_stylesheet,
 				)
 			);
-		}//end cm_customize_js_css()
-
+		}
 
 
 		/**
 		 * A method to print the Childify-Me box template.
 		 *
 		 * @since 1.0.0
+		 *
 		 * @hook customize_controls_print_footer_scripts
 		 */
 		public function cm_print_template() {
-			// this template will be loaded with underscore in cm-customizr(.min).js .
+			// This template will be loaded with underscore in cm-customizr(.min).js.
 			?>
 			<script type="text/template" id="childify-tpl">
 				<div id="childify-container">
@@ -438,7 +443,7 @@ EOF;
 				</div>
 			</script>
 			<?php
-		}//end cm_print_template()
-	}//end class
+		}
+	}
 
 endif;
