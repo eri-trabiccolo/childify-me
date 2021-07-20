@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Childify Me 1.2.2\n"
+"Project-Id-Version: Childify Me 1.2.3\n"
 "Report-Msgid-Bugs-To: https://github.com/eri-trabiccolo/childify-me/\n"
-"POT-Creation-Date: 2020-11-27 18:01:47+00:00\n"
+"POT-Creation-Date: 2021-07-20 07:54:43+00:00\n"
 "PO-Revision-Date: 2015-05-06 15:24+0100\n"
 "Last-Translator: Rocco Aliberti\n"
 "Language-Team: Eksi.Net <info@eksi.net>\n"
@@ -18,43 +18,43 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: class-childify-me.php:191
+#: class-childify-me.php:193
 msgid "Error while trying to access the filesystem!"
 msgstr "Помилка доступу до файлової системи!"
 
-#: class-childify-me.php:217
+#: class-childify-me.php:219
 msgid "Administrator"
 msgstr "Адміністратор"
 
-#: class-childify-me.php:407
+#: class-childify-me.php:412
 msgid "Click on the button below to create a child theme"
 msgstr "Натисніть на кнопку нижче, щоб створити дочірню тему"
 
-#: class-childify-me.php:423
+#: class-childify-me.php:428
 msgid "Child theme name here"
 msgstr "Введіть назву вашої дочірньої теми"
 
-#: class-childify-me.php:424
+#: class-childify-me.php:429
 msgid "Create"
 msgstr "Створити"
 
-#: class-childify-me.php:425
+#: class-childify-me.php:430
 msgid "Cancel"
 msgstr "Скасувати"
 
-#: class-childify-me.php:428
+#: class-childify-me.php:433
 msgid "Child theme"
 msgstr "Дочірня тема"
 
-#: class-childify-me.php:429
+#: class-childify-me.php:434
 msgid "successfully created!"
 msgstr "успішно створена!"
 
-#: class-childify-me.php:433
+#: class-childify-me.php:438
 msgid "Preview and Activate"
 msgstr "Попередній перегляд та активація"
 
-#: class-childify-me.php:438
+#: class-childify-me.php:443
 msgid "Go to Network Themes"
 msgstr "Перейти до тем у мережі"
 

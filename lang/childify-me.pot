@@ -1,55 +1,55 @@
-# Copyright (C) 2020 Rocco Aliberti
+# Copyright (C) 2021 Rocco Aliberti
 # This file is distributed under the GPL2+.
 msgid ""
 msgstr ""
-"Project-Id-Version: Childify Me 1.2.2\n"
+"Project-Id-Version: Childify Me 1.2.3\n"
 "Report-Msgid-Bugs-To: https://github.com/eri-trabiccolo/childify-me/\n"
-"POT-Creation-Date: 2020-11-27 18:01:47+00:00\n"
+"POT-Creation-Date: 2021-07-20 07:54:43+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2020-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2021-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Rocco\n"
 "Language-Team: Childify-Me translation contributors\n"
 "X-Generator: grunt-wp-i18n 1.0.3\n"
 
-#: class-childify-me.php:191
+#: class-childify-me.php:193
 msgid "Error while trying to access the filesystem!"
 msgstr ""
 
-#: class-childify-me.php:217
+#: class-childify-me.php:219
 msgid "Administrator"
 msgstr ""
 
-#: class-childify-me.php:407
+#: class-childify-me.php:412
 msgid "Click on the button below to create a child theme"
 msgstr ""
 
-#: class-childify-me.php:423
+#: class-childify-me.php:428
 msgid "Child theme name here"
 msgstr ""
 
-#: class-childify-me.php:424
+#: class-childify-me.php:429
 msgid "Create"
 msgstr ""
 
-#: class-childify-me.php:425
+#: class-childify-me.php:430
 msgid "Cancel"
 msgstr ""
 
-#: class-childify-me.php:428
+#: class-childify-me.php:433
 msgid "Child theme"
 msgstr ""
 
-#: class-childify-me.php:429
+#: class-childify-me.php:434
 msgid "successfully created!"
 msgstr ""
 
-#: class-childify-me.php:433
+#: class-childify-me.php:438
 msgid "Preview and Activate"
 msgstr ""
 
-#: class-childify-me.php:438
+#: class-childify-me.php:443
 msgid "Go to Network Themes"
 msgstr ""
 

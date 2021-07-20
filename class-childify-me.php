@@ -8,6 +8,7 @@
  * @author Rocco Aliberti
  *
  * @since 1.0.0
+ * @version 1.2.3
  */
 
 // Exit if accessed directly.
@@ -31,7 +32,7 @@ if ( ! class_exists( 'Childify_Me' ) ) :
 		 * @static
 		 * @var string
 		 */
-		private static $plug_version = '1.2.2';
+		private static $plug_version = '1.2.3';
 
 		/**
 		 * Themes which do not need the style.css importing.
@@ -44,7 +45,6 @@ if ( ! class_exists( 'Childify_Me' ) ) :
 			'hueman'        => array( 'version' => '3.0' ),
 			'hueman-pro'    => array(),
 		);
-
 
 		/**
 		 * Main Childify_Me Instance.
@@ -59,7 +59,7 @@ if ( ! class_exists( 'Childify_Me' ) ) :
 		 * @static object $instance
 		 * @see cm_childifyme()
 		 *
-		 * @return ChildifyMe|null The Childify-Me instance.
+		 * @return ChildifyMe|void The Childify-Me instance.
 		 */
 		public static function instance() {
 			if ( ! is_admin() ) {
@@ -99,18 +99,20 @@ if ( ! class_exists( 'Childify_Me' ) ) :
 		 *
 		 * @see Childify_Me::instance()
 		 * @see cm_childifyme()
+		 *
+		 * @return void
 		 */
 		private function __construct() {
 			/* Do nothing here */
 		}
-
-
 
 		/**
 		 * This method adds needed actions and filters
 		 *
 		 * @since 1.0.0
 		 * @hook plugins_loaded
+		 *
+		 * @return void
 		 */
 		public function cm_plugin_setup_hooks() {
 			add_action(
@@ -130,14 +132,13 @@ if ( ! class_exists( 'Childify_Me' ) ) :
 			);
 		}
 
-
-
 		/**
 		 * AJAX Callback
 		 *
 		 * Here is where we do our security checks and sanitize teh $_POST data.
 		 *
 		 * @since 1.0.0
+		 * @return void
 		 */
 		public function cm_create_child_theme() {
 
@@ -172,7 +173,8 @@ if ( ! class_exists( 'Childify_Me' ) ) :
 		 * @since 1.0.0
 		 *
 		 * @param string $parent_stylesheet The parent theme stylesheet.
-		 * @param string $childname The child theme name.
+		 * @param string $childname         The child theme name.
+		 * @return void
 		 */
 		private function cm_do_create_child_theme( $parent_stylesheet, $childname ) {
 			global $wp_filesystem;
@@ -275,16 +277,13 @@ EOF;
 			wp_send_json_success( array( 'stylesheet' => sanitize_file_name( strtolower( $child ) ) ) );
 		}
 
-
-
 		/**
 		 * Helper to create the child-theme screenshot starting from the parent one.
 		 *
 		 * @since 1.0.0
 		 *
-		 * @param string $parent_screenshot The parent theme screenshot file name.
+		 * @param string $parent_screenshot           The parent theme screenshot file name.
 		 * @param string $parent_screenshot_extension The parent theme screenshot file extension (jpg or png).
-		 *
 		 * @return image|bool The child-theme screenshot image content, or false.
 		 */
 		private function cm_screenshot( $parent_screenshot, $parent_screenshot_extension ) {
@@ -334,6 +333,8 @@ EOF;
 		 * @since 1.0.0
 		 *
 		 * @hook plugins_loaded
+		 *
+		 * @return void
 		 */
 		public function cm_plugin_lang() {
 			load_plugin_textdomain( 'childify-me', false, CM_DIR_NAME . '/lang' );
@@ -347,6 +348,8 @@ EOF;
 		 * @since 1.0.0
 		 *
 		 * @hook customize_controls_enqueue_scripts
+		 *
+		 * @return void
 		 */
 		public function cm_customize_js_css() {
 			global $wp_customize;
@@ -396,6 +399,8 @@ EOF;
 		 * @since 1.0.0
 		 *
 		 * @hook customize_controls_print_footer_scripts
+		 *
+		 * @return void
 		 */
 		public function cm_print_template() {
 			// This template will be loaded with underscore in cm-customizr(.min).js.

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Childify Me 1.2.2\n"
+"Project-Id-Version: Childify Me 1.2.3\n"
 "Report-Msgid-Bugs-To: https://github.com/eri-trabiccolo/childify-me/\n"
-"POT-Creation-Date: 2020-11-27 18:01:47+00:00\n"
+"POT-Creation-Date: 2021-07-20 07:54:43+00:00\n"
 "PO-Revision-Date: 2015-05-06 15:24+0100\n"
 "Last-Translator: Yaacov Glezer\n"
 "Language-Team: JTS <info@eksi.net>\n"
@@ -18,43 +18,43 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: class-childify-me.php:191
+#: class-childify-me.php:193
 msgid "Error while trying to access the filesystem!"
 msgstr "ארעה שגיאה בניסיון גישה למערכת הקבצים!"
 
-#: class-childify-me.php:217
+#: class-childify-me.php:219
 msgid "Administrator"
 msgstr "מנהל"
 
-#: class-childify-me.php:407
+#: class-childify-me.php:412
 msgid "Click on the button below to create a child theme"
 msgstr "לחץ על הכפתור למטה כדי ליצור תבנית-בת"
 
-#: class-childify-me.php:423
+#: class-childify-me.php:428
 msgid "Child theme name here"
 msgstr "שם תבנית הבת"
 
-#: class-childify-me.php:424
+#: class-childify-me.php:429
 msgid "Create"
 msgstr "יצירה"
 
-#: class-childify-me.php:425
+#: class-childify-me.php:430
 msgid "Cancel"
 msgstr "ביטול"
 
-#: class-childify-me.php:428
+#: class-childify-me.php:433
 msgid "Child theme"
 msgstr "תבנית-בת"
 
-#: class-childify-me.php:429
+#: class-childify-me.php:434
 msgid "successfully created!"
 msgstr "נוצרה בהצלחה!"
 
-#: class-childify-me.php:433
+#: class-childify-me.php:438
 msgid "Preview and Activate"
 msgstr "תצוגה מקדימה והפעלה"
 
-#: class-childify-me.php:438
+#: class-childify-me.php:443
 msgid "Go to Network Themes"
 msgstr "מעבר לתבניות רשת"
 

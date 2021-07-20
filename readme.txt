@@ -2,11 +2,10 @@
 Contributors: d4z_c0nf
 Author URI: https://github.com/eri-trabiccolo/
 Plugin URI: https://github.com/eri-trabiccolo/childify-me
-Donate link: https://www.paypal.com/donate?hosted_button_id=P6VX3CYP55HDJ
 Tags: child theme, child-themes, childtheme, childthemes, custom theme, custom themeing, parent theme, child theme creator, child theme generator, child, theme, themes
 Requires at least: 3.4
-Tested up to: 5.6
-Stable tag: 1.2.2
+Tested up to: 5.8
+Stable tag: 1.2.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -100,6 +99,10 @@ Please read [this](https://wordpress.org/support/topic/needs-update-12/) topic
 4. Childify Me in multisite environment creating a child-theme of Twenty Twelve's from Live Preview
 
 == Changelog ==
+
+= 1.2.3 : July 20, 2021 =
+* Code clean-up.
+
 = 1.2.2 : November 27, 2020 =
 * fix buttons css
 
