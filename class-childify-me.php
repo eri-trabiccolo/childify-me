@@ -85,7 +85,7 @@ if ( ! class_exists( 'Childify_Me' ) ) :
 				}
 
 				// adds plugin text domain.
-				add_action( 'plugins_loaded', array( $instance, 'cm_plugin_lang' ) );
+				add_action( 'after_setup_theme', array( $instance, 'cm_plugin_lang' ) );
 				// setup hooks.
 				add_action( 'plugins_loaded', array( $instance, 'cm_plugin_setup_hooks' ) );
 			}
@@ -115,6 +115,11 @@ if ( ! class_exists( 'Childify_Me' ) ) :
 		 * @return void
 		 */
 		public function cm_plugin_setup_hooks() {
+			add_action(
+				'customize_register',
+				'__return_true'
+			);
+
 			add_action(
 				'customize_controls_enqueue_scripts',
 				array( $this, 'cm_customize_js_css' ),
@@ -331,8 +336,6 @@ EOF;
 		 * A method to load the plugin textdomain.
 		 *
 		 * @since 1.0.0
-		 *
-		 * @hook plugins_loaded
 		 *
 		 * @return void
 		 */
