@@ -4,8 +4,8 @@ Author URI: https://github.com/eri-trabiccolo/
 Plugin URI: https://github.com/eri-trabiccolo/childify-me
 Tags: child theme, child-themes, childtheme, childthemes, custom theme, custom themeing, parent theme, child theme creator, child theme generator, child, theme, themes
 Requires at least: 3.4
-Tested up to: 5.8
-Stable tag: 1.2.3
+Tested up to: 6.7
+Stable tag: 1.3.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -100,8 +100,14 @@ Please read [this](https://wordpress.org/support/topic/needs-update-12/) topic
 
 == Changelog ==
 
+= 1.3.0: November 28, 2024 =
+* Tested against WordPress 6.7.1
+* Replaced childify-me badge with a smaller image
+* Fixed localized strings split in chunks
+* Always show up the Customize button under the Appearance menu
+
 = 1.2.3 : July 20, 2021 =
-* Code clean-up.
+* Code clean-up
 
 = 1.2.2 : November 27, 2020 =
 * fix buttons css

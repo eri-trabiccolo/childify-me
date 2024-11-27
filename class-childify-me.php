@@ -32,7 +32,7 @@ if ( ! class_exists( 'Childify_Me' ) ) :
 		 * @static
 		 * @var string
 		 */
-		private static $plug_version = '1.2.3';
+		private static $plug_version = '1.3.9';
 
 		/**
 		 * Themes which do not need the style.css importing.
