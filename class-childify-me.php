@@ -432,9 +432,15 @@ EOF;
 						esc_html__( 'Create', 'childify-me' ),
 						esc_html__( 'Cancel', 'childify-me' )
 					);
-					printf('<div id="cm-success" class="updated"><p>%1$s <span id="cm-ctheme"></span> %2$s</p>%3$s</div>',
-						esc_html__( 'Child theme', 'childify-me' ),
-						esc_html__( 'successfully created!', 'childify-me' ),
+
+					$message = sprintf(
+						// Tanslators: %1$s html element to be filled via js.
+						esc_html__( 'Child theme %1$s succesfully created!', 'childify-me' ),
+						'<span id="cm-ctheme"></span>'
+					);
+
+					printf('<div id="cm-success" class="updated"><p>%1$s</p>%2$s</div>',
+						$message,
 						( ! is_multisite() ) ?
 							sprintf( '<a id="%3$s" class="button button-primary" href="%1$s" title="%2$s" tabindex="0">%2$s</a>',
 								sprintf( '%1$s?theme=', esc_url( admin_url( 'customize.php' ) ) ),
